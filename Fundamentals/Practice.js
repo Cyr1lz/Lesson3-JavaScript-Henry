@@ -23,7 +23,7 @@ const VAT = 7.5;
 const COUNTRY_CODE = 'NGR';
 
 // Output to developer console using console.log()
-console.log("My name is " + myName + " and I love " + beef + "beef");
+console.log("My name is " + myName + " and I love " + beef + " beef");
 
 // Creates a variable sentence and assign a string to it.
 let sentence = "My name is " + myName + " and I love " + beef + " beef";
@@ -120,7 +120,7 @@ let babyToy = {
 
 babyToy.cry(); // Execute the babyToy object method property
 
-
+console.log(3 + '3')
 
 
 
