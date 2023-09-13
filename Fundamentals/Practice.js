@@ -28,13 +28,8 @@ console.log("My name is " + myName + " and I love " + beef + " beef");
 // Creates a variable sentence and assign a string to it.
 let sentence = "My name is " + myName + " and I love " + beef + " beef";
 
-// Gets the html paragraph HTML element
-let subheading = document.querySelector('p');
-console.log(subheading) // output element to console
-// Modify the paragraph content programatically
-subheading.textContent="This is an example of how you can change text content.";
-
-subheading.textContent = sentence;
+// Output sentence variable to console
+console.log(sentence);
 
 /* 
 Data Types 
