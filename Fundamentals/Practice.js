@@ -14,22 +14,6 @@ function processInvoice() {
     var invoice = new Invoice() 
 }
 
-let beef;
-let myName;
-
-beef ="Bokoto";
-myName = "Babajide"
-const VAT = 7.5; 
-const COUNTRY_CODE = 'NGR';
-
-// Output to developer console using console.log()
-console.log("My name is " + myName + " and I love " + beef + " beef");
-
-// Creates a variable sentence and assign a string to it.
-let sentence = "My name is " + myName + " and I love " + beef + " beef";
-
-// Output sentence variable to console
-console.log(sentence);
 
 /* 
 Data Types 
