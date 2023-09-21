@@ -1,16 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
     <title>Javascript Variables</title>
-</head>
-<body>
-    <a href="/Fundamentals/index.html">Home</a>
-    <h2>Javascript Variables</h2>
-
+  </head>
+  <body>
+    <header>
+      <a href="/Fundamentals/index.html">Home</a>
+      <h2>Javascript Variables</h2>
+      <nav>
+        <a href="#declare-Varaibles">Declaring variables</a>
+        <a href="#declare-string-varaibles">Declaring string variables</a>
+        <a href="#math-with-variables">Performing maths with varaibles </a>
+      </nav>
+    </header>
+    <section id="declare-Varaibles">
+      <h3>Declaring Variables</h3>
+      <p>
+        Variables are declared using the keywords <em>var</em>, <em>let</em>,
+        <em>const</em>
+        <code>
+          //<em>var</em> & <em>let</em> declare varaibles that can change over
+          time<br />var beef;<br />let lastName;<br /><br />const TAX; //this
+          declares a constant variable
+        </code>
+      </p>
+      <p>
+        Uninitialzed variables have a default value of undefined
+        <code> console.log(car); //undefined </code>
+      </p>
+    </section>
+    <section id="assigning-Varaibles">
+      <h3>Assigning Variables</h3>
+      <p>
+        Variables are asssigned values using the assignment operator(equals sign
+        "=")
+        <code>
+          car = "Volvo";<br />
+          beef = "Bokoto";<br />
+          myName = "Babajide";<br />
+          const VAT = 7.5;<br />
+          const COUNTRY_CODE = "NGR";<br />
+        </code>
+      </p>
+    </section>
+    <section id="using-varaibles">
+      <h3>Using Variables</h3>
+      <p>
+        Values stored in variables can be retrieved, and assigned to other
+        varaibles or used in statements.
+      </p>
+      <p>
+        Ex.1 Assign the value of the variable beef to the variable defaultBeef
+      </p>
+      <code> const defaultBeef = beef </code>
+      <p>
+        Create a string using the value of varaibles and assign it to a new
+        variable.
+      </p>
+      <code>
+        let sentence = "My name is " + myName + " and I love " + beef + " beef";
+      </code>
+      <code>
+        console.log(sentence); // Output the variable to console
+      </code>
+    </section>
+    <section id="case-sensitvity">
+      <h3>Case Sensitivity</h3>
+      <p>Javascript variables are case sensitive.So, Mother, mother, and moTheR are not the same variables</p>
+      <code>
+        var Mother = 'Janet';<br>
+        console.log(Mother); //-> Janet
+      </code>
+        <code>
+          Mother = 'Mary';<br>
+        console.log(Mother); //-> Mary
+        </code>
+       <code>
+          MoTher = "Suzan"; // -> Error
+       </code>  
+      </code>
+    </section>
+    <section id="diffrence-var-let">
+      <h3>Diffrence between var and let</h3>
+    1. Variables declared with var can be accidentally redclared. <br>
+    2. Unlike var variables declared with "let" can only be declared once. <br>
+    3. Any attempt to redclare a varable declared with "let" will result in Syntax Error
+    <code>
+      var player = 'James'; <br>
+      var player = 'Peter'; <br>
+      console.log(player); //-> Peter No Errors 
+    </code>
+    <code>
+      let player = 'James'; <br>
+      let player = 'Peter'; //-> Error!! 
+    </code>
+    </section>
+    <section id="read-only-varaibles">
+    <h3>Declaring Read Only Varaibles</h3> 
+    <p>
+      We can decalare Read Only variables with the keyword "const". const has all the benefit of the "let" keyword with the added bonus
+      that varables const are read only and can not be reassigned once declared. 
+    </p>
+    <code>
+      const FAV_PET = "Dogs";
+      FAV_PET = "Cats"; //-> Error!!
+    </code>
+    </section>
+    <section id="Using Numbers">
+    <h3>Using Numbers in JavaScript</h3> 
+    <p>
+       
+    </p>
+    <h5>Add two Numbers with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Subtract two Numbers with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Multiply two Numbers with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Divide One Number by Another with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Increment a Number with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Decrement a Number with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Create Decimal Numbers with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Multiply two Decimal Numbers with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Divide one Decimal by another with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Finding the remainder with JavaScript</h5>
+    <code>
+      
+    </code>
+    <h5>Compound Addition Assignment</h5>
+    <code>
+      
+    </code>
+    <h5>Compound Subtraction Assignment</h5>
+    <code>
+      
+    </code>
+    <h5>Compound Multiplication Assignment</h5>
+    <code>
+      
+    </code>
+    <h5>Compound Division Assignment</h5>
+    <code>
+      
+    </code>
+    </section>
+    <section id="Using Strings">
+    <h3>Using Strings in JavaScript</h3> 
+    <p>
+       
+    </p>
+    <h5>Escaping Literal Quotes in Strings</h5>
+    <code>
+      
+    </code>
+    <h5>Concatenating Strings with Plus operator</h5>
+    <code>
+      
+    </code>
+    <h5>Concatenating Strings with Plus Equals operator</h5>
+    <code>
+      
+    </section>
+    
     <script src="variables.js"></script>
-</body>
+  </body>
 </html>

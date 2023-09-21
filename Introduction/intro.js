@@ -24,7 +24,23 @@ console.log(myArray);
 console.table(myArray); // Useful for displaying arrays and objects
 
 /* 3. Data Types */
+const isReady = false;
+console.log('isReady', typeof isReady);
 
+const VAT = 7.5;
+console.log('VAT', typeof VAT);
+
+const firstname = "Babajide";
+console.log('firstname', typeof firstname);
+
+const car = {engine: 'V6'}
+console.log('car', typeof car);
+
+const isEmpty = undefined;
+console.log('isEmpty', typeof isEmpty);
+
+const isNull = null;
+console.log('isNull', typeof isNull);
 
 
 
