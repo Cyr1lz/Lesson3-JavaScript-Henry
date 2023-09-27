@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
-    <title>Javascript Strings</title>
-  </head>
-  <body>
-    <header>
-      <a href="../index.html">Home</a>
-      <h2>Javascript Strings</h2>
-      <nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../style.css" />
+		<title>Javascript Strings</title>
+	</head>
+	<body>
+		<header>
+			<a href="../index.html">Home</a>
+			<h2>Javascript Strings</h2>
+			<nav></nav>
+		</header>
+		<section id="using-strings">
+			<h3>Using Strings with JavaScript</h3>
+			<p>
+				Strings in Javascript are a sequence of Unicode characters enclosed
+				within quotation marks, which represent textual data.
+			</p>
+			<h5>Declaring a String</h5>
+			<p>A string may be decalred with either single or double quotes.</p>
+			<code> let myStr = "this is a string declared with double quotes"; </code>
+			<code> myStr = 'this is a string declared with single quotes'; </code>
+			<h5>Escaping Literal Quotes in Strings</h5>
+			<code>
+				myStr = "there is \"an escaped quote literal\" inside this string"</code
+			>
+			<code>
+				console.log(myStr); //-> there is "an escaped quote literal" inside this
+				string
+			</code>
+			<h5>Concatenating Strings with Plus operator</h5>
+			<code>/* Watch out for spaces. Concatenation does not add them */ </code>
+			<code>
+				let concatenatedStr = "I am a string " + "I'm concatenated " + "with
+				other strings."
+			</code>
+			<code>
+				console.log(concatenatedStr) //-> "I am a string concatenated with other
+				strings"
+			</code>
+			<h5>Concatenating Strings with Plus Equals operator</h5>
+			<code> concatenatedStr += " using the Plus Equals operator" </code>
+			<code>
+				console.log(concatenatedStr) //-> "I am a string concatenated with other
+				strings using the Plus Equals operator"
+			</code>
+		</section>
 
-      </nav>
-    </header>
-    <section id="using-strings">
-    <h3>Using Strings with JavaScript</h3> 
-    <p>
-       Strings in Javascript are a sequence of Unicode characters enclosed within quotation marks, which represent textual data.
-    </p>
-    <h5>Declaring a String</h5>
-    <p>A string may be decalred with either single or double quotes.</p>
-    <code>
-      let myStr = "this is a string declared with double quotes";
-    </code>
-    <code>
-      myStr = 'this is a string declared with single quotes';
-    </code>
-    <h5>Escaping Literal Quotes in Strings</h5>
-    <code>
-      
-    </code>
-    <h5>Concatenating Strings with Plus operator</h5>
-    <code>
-      
-    </code>
-    <h5>Concatenating Strings with Plus Equals operator</h5>
-    <code>
-      
-    </section>
-
-    <script src="strings.js"></script>
-  </body>
+		<script src="strings.js"></script>
+	</body>
 </html>

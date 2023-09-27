@@ -145,9 +145,3 @@ b /= 5;
 c /= 5;
 
 console.log(a, b, c);
-
-/* Nifemi said, "Dupe is learning Javascript". */
-
-const sampleStr = 'Nifemi said, "Dupe is learning Javascript".';
-
-console.log(sampleStr);
