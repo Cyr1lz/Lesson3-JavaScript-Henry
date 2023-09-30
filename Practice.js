@@ -178,7 +178,7 @@ let firstCharacterOfStr = output[0];
 console.log("The first character is " + firstCharacterOfStr + " at index 0");
 console.log("The first character is " + "Hello World"[0] + " at index 0");
 
-/* Excercise 
+/* Excercise 2
 Extract the 3rd character of the string "Lorem Ipsum Envato Redismuc Satos" */
 
 console.log(
@@ -207,7 +207,7 @@ while (i <= endOfString) {
 	i++;
 }
 
-/* Assignment 
+/* Exercise 3
 	Word Blanks.
 
 	Fill in the blanks

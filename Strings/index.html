@@ -48,7 +48,62 @@
 				strings using the Plus Equals operator"
 			</code>
 		</section>
-
+		<section>
+			<h5>Finding the Length of a string</h5>
+			<code>
+				/* Note Everything in JavaScript is an object, and every object has
+				properties and methods. Therefore to find the length of a string for
+				example we use the 'length' property of the string*/
+			</code>
+			<code>
+				let lengthOfStr = output.length; console.log(lengthOfStr); //-> 86
+				includes the spaces in between.
+			</code>
+		</section>
+		<section>
+			<h5>Find the Nth chracter of a string using the bracket notation</h5>
+			<code>
+				/* Note Generally JavaScript indexes start at 0 NOT 1. What this implies
+				is that counting starts from zero(0). Therefore to access the first
+				letter of a string we would use the index zero(0). */
+			</code>
+			<code>
+				let firstCharacterOfStr = output[0]; console.log("The first character is
+				" + firstCharacterOfStr + " at index 0");
+			</code>
+			<code>
+				console.log("The first character is " + "Hello World"[0] + " at index
+				0");
+			</code>
+			<code>
+				/* Excercise <br />Extract the 3rd character of the string "Lorem Ipsum
+				Envato Redismuc Satos" */
+			</code>
+			<code>
+				console.log( "The third character is " + "Lorem Ipsum Envato Redismuc
+				Satos"[2] + " at index 2" );
+			</code>
+			<code>
+				console.log( "The eight character is " + "Lorem Ipsum Envato Redismuc
+				Satos"[7] + " at index 7" );
+			</code>
+		</section>
+		<section>
+			<h5>Find the last character of a string using the bracket notation</h5>
+			<code>
+				ourString = "Lorem Ipsum Envato Redismuc Satos";
+				console.log(ourString[ourString.length - 1]); //-> s
+			</code>
+			<code>
+				/* Example Usage using a 'while loop' */ ourString = "Ibe"; <br />let
+				endOfString = ourString.length - 1; <br />
+				let i = 0;
+			</code>
+			<code>
+				while (i <= endOfString) { // Do something console.log(ourString[i]);
+				i++; } //-> I b e
+			</code>
+		</section>
 		<script src="strings.js"></script>
 	</body>
 </html>
