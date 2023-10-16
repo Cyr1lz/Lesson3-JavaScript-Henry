@@ -216,8 +216,52 @@ while (i <= endOfString) {
 
 	Build this sentence using concatenation and the plus or Plus Equals operator.
 	
-	Find the value of the eigth character
+	Find the value of the eight character
   
 	Dynamically add a full stop to the end of the string.
 
 */
+
+/* Arrays */
+/* 
+An Array can be described as a contiguious collection of values.*/
+
+/*Store Multiple Values - You store multiple values in one variable using an array
+ */
+
+let burger = ["beef", "butter", "cucumber", "bread"];
+console.log(burger);
+
+/* Nesting Arrays - You can store sub-arrays within an array also called Multi-dimensional array*/
+const favTeamsAndPositionInLeague = [
+	["ManU", 1],
+	["Chelsea", 2],
+	["ManCity", 3],
+];
+
+console.log(favTeamsAndPositionInLeague);
+
+const prayingCountriesAndPercentageOfPopulation = [
+	["Afganistan", 96],
+	["Nigeria", 95],
+];
+console.log(prayingCountriesAndPercentageOfPopulation);
+
+/* Access & Modify Array Data - We can modify and access array data using indexes. Arrays are indexed starting at Zero. The last element of an array is indexed at the length of the array minus one.
+ */
+
+/* Access values */
+// Get the first data element of the burger
+const firstValue = burger[0];
+console.log(firstValue);
+
+// Get the last data element of an Array
+const lastValue = burger[burger.length - 1];
+console.log(lastValue);
+
+// Get Third value of the array
+const thirdValue = burger[2];
+console.log(thirdValue);
+
+/* Modify Array data - Example */
+// Lets say
