@@ -310,9 +310,83 @@ console.log(ourArray);
 	Exercise 
 	Create a shopping list in the variable "shoppingList". 
 	1) The list should be a multi-dimensional array containing several sub-arrays. 
-	2) The first element in each sub-array should contain a string with the name of the item, the second element should be the quantity.
+	2) The first element in each sub-array should contain a string with the name of the item, the second element should be a number representing quantity.
 	3) The shopping list should contain at least five sub-arrays
 	4) Remove the last item in your shopping list that wasn't in the shop and replace it with this item that was available in the shop ["Chocolate", 5];
 	5) The shopping list should contain 5 items
-
 */
+
+let shoppingList = [
+	["Icecream", 2],
+	["Bread", 4],
+	["Milk", 3],
+	["Butter", 1],
+	["Mayonese", 1],
+];
+console.log(shoppingList);
+let notFoundInShop = shoppingList.pop();
+console.log(notFoundInShop);
+console.log(shoppingList);
+shoppingList.push(["Chocolate", 5]);
+console.log(shoppingList);
+
+/* 
+	Reusable Functions 
+	- Allow you to divide up your code into reusable parts called functions.
+	You declare a function using the "function" keyword, followed by the name of the function, parenthesis and curly braces
+	Example
+*/
+function functionName() {
+	console.log("Hello World");
+}
+
+console.log(functionName);
+
+/* For the function to work you have to call or invoke the function using its name followed by parenthesis */
+
+functionName();
+
+/* All the code between the curly braces will be executed every time the function is called
+ */
+functionName();
+functionName();
+functionName();
+
+/* Exercise 
+	1. Create a function which prints out the string "Hi Babajide" to the dev console.
+	2. Call the function twice.
+*/
+function greet() {
+	console.log("Hi Babajide");
+}
+
+greet();
+greet();
+
+/* 
+Function Arguments 
+- Functions can accept parameters. These Parameters are variables that act as placeholders for the values that are to be inputs to a function.
+- When a function is defined, it is usually defined along with Parameters.
+- The actual values that are input("passed") into the function when it is called or invoked are know as arguments.
+*/
+
+function testFn(param1, param2) {
+	console.log(param1, param2);
+}
+
+testFn("Hello", "World");
+
+/* 
+	Exercise 
+	1. Create a function called fnWithArgs. 
+	2. The function should accept two arguments.
+	3. It should output the sum of the arguments to console.
+	4. Call or invoke the function with two numbers as arguments 
+*/
+
+function fnWithArgs(num1, num2) {
+	console.log(num1 + num2);
+}
+
+fnWithArgs(2, 3);
+fnWithArgs(12, 13);
