@@ -224,7 +224,7 @@ while (i <= endOfString) {
 
 /* Arrays */
 /* 
-An Array can be described as a contiguious collection of values.*/
+An Array can be described as a contiguous collection of values.*/
 
 /*Store Multiple Values - You store multiple values in one variable using an array
  */
@@ -263,5 +263,56 @@ console.log(lastValue);
 const thirdValue = burger[2];
 console.log(thirdValue);
 
-/* Modify Array data - Example */
-// Lets say
+/* Modify Array data - Array data values can be modified using their index
+ */
+// Example - Lets say we wanted a fish burger rather than a beef burger
+burger[0] = "fish";
+console.log(burger);
+
+/* Exercise 1 
+	Modify the favTeamsAndPositionInLeague array such that the position of the "Chelsea Team is 4" and log the array to console.
+*/
+
+favTeamsAndPositionInLeague[1][1] = 4;
+console.log(favTeamsAndPositionInLeague);
+
+favTeamsAndPositionInLeague[2][0] = "Arsenal";
+console.log(favTeamsAndPositionInLeague);
+
+/* 
+	Basic Array Manipulating - You can manipulate arrays using special array methods such push(), pop(), shift(), unshift()
+*/
+/* Push() - An easy way to append data to the end of an array is by using the push(). The push method takes one or more arguments and appends them to the end of the array, in order that they appear. It returns the length of the array*/
+
+const arr1 = [1, 2, 3];
+arr1.push(4, 5);
+console.log(arr1);
+
+/* Pop() is another way to change the data in an array. It is used to pop a value off of the end of an array. The popped off value can then be stored in a variable. So we can pop() removes the LAST element from an array and returns that element*/
+
+const arrOfThree = [1, 3, 5];
+const removedOne = arrOfThree.pop();
+console.log(removedOne); //-> 5
+console.log(arrOfThree); //-> [1, 3]
+
+/* shift() - The shift() removes the first element of an array. Similar to the pop() method but removes the first element of the array*/
+const ourArray = ["Ibe", "and", "Dupe", "are", "in", "class"];
+// whats the name of the first student to leave the class, who is left in class?
+const leavesTheClass = ourArray.shift();
+console.log(leavesTheClass); //- 'Ibe'
+console.log(ourArray);
+
+/* unshift() - Add values to the beginning  of an array. It works exactly push() but appends values to the beginning of the array*/
+const returnedToClass = ourArray.unshift("Ibe");
+console.log(ourArray);
+
+/* 
+	Exercise 
+	Create a shopping list in the variable "shoppingList". 
+	1) The list should be a multi-dimensional array containing several sub-arrays. 
+	2) The first element in each sub-array should contain a string with the name of the item, the second element should be the quantity.
+	3) The shopping list should contain at least five sub-arrays
+	4) Remove the last item in your shopping list that wasn't in the shop and replace it with this item that was available in the shop ["Chocolate", 5];
+	5) The shopping list should contain 5 items
+
+*/
