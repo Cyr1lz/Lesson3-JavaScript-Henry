@@ -13,11 +13,10 @@
 			<h2>Javascript Arrays</h2>
 			<nav>
 				<a href="#store-multiple-values">Store Multiple Values</a>
-				<a href="#nesting-arrays">Nesting Arrays</a>
+				<a href="#multi-dimensional-arrays">Multi-Dimensional Arrays</a>
 				<a href="#access-modify-array-data">Access And Modify Array Data</a>
-				<a href="#multi-dimensional-arrays">Multi Dimensional Arrays</a>
+
 				<a href="#basic-array-manipulation">Basic Array Manipulation</a>
-				<a href="#basic-array-data-structure">Basic Array Data Structure</a>
 			</nav>
 		</header>
 		<section>
@@ -36,8 +35,8 @@
 				<code>console.log(burger);</code>
 			</p>
 		</section>
-		<section id="nesting-arrays">
-			<h3>Nesting Arrays</h3>
+		<section id="multi-dimensional-arrays">
+			<h3>Multi-Dimensional Arrays</h3>
 			<p>
 				You can store sub-arrays within an array also called Multi-dimensional
 				array.
@@ -47,35 +46,92 @@
 				</code>
 				<code> console.log(favTeamsAndPositionInLeague); </code>
 				<code>
-					const prayingCountriesAndPercentageOfPopulation = [ ["Afganistan",
-					96], ["Nigeria", 95], ];
+					const prayingCountriesAndPercentageOfPopulation = [
+					<br />["Afganistan", 96], ["Nigeria", 95],];
 				</code>
-				<code> console.log(prayingCountriesAndPercentageOfPopulation); </code>
+				<code
+					>console.log<br />(prayingCountriesAndPercentageOfPopulation);
+				</code>
 			</p>
 		</section>
 		<section id="access-modify-array-data">
 			<h3>Access & Modify Array Data</h3>
 			<p>
-				<code></code>
+				Access & Modify Array Data - We can modify and access array data using
+				indexes. Arrays are indexed starting at Zero. The last element of an
+				array is indexed at the length of the array minus one.
 			</p>
+			<h4>Access Array Data</h4>
+			<p>Array data values can be accessed using their index</p>
+			<code>// Get the first data element of the burger</code>
+			<code> const firstValue = burger[0]; console.log(firstValue);</code>
+			<code> // Get the last data element of an Array</code
+			><code>
+				const lastValue = burger[burger.length - 1]; console.log(lastValue);
+			</code>
+			<code> // Get Third value of the array</code
+			><code> const thirdValue = burger[2]; console.log(thirdValue); </code>
+			<code>// Get Third value of the array </code>
+			<code>const thirdValue = burger[2]; console.log(thirdValue);</code>
+			<h4>Modify Array Data</h4>
+			<p>Array data values can be modified using their index</p>
+			<code
+				>// Example - Lets say we wanted a fish burger rather than a beef
+				burger</code
+			>
+			<code>burger[0] = "fish";</code>
+			<code>console.log(burger);</code>
 		</section>
-		<section id="multi-dimensional-arrays">
-			<h3>Multi Dimensional Arrays</h3>
-			<p>
-				<code></code>
-			</p>
-		</section>
+
 		<section id="basic-array-manipulation">
 			<h3>Basic Array Manipulation</h3>
 			<p>
-				<code></code>
+				Basic Array Manipulating - You can manipulate arrays using special array
+				methods such push(), pop(), shift(), unshift()
 			</p>
-		</section>
-		<section id="basic-array-data-structure">
-			<h3>Basic Array Data Structure</h3>
+			<h4>push()</h4>
 			<p>
-				<code></code>
+				An easy way to append data to the end of an array is by using the
+				<em>push() method</em>. The push method takes one or more arguments and
+				appends them to the end of the array, in order that they appear. It
+				returns the length of the array
 			</p>
+			<code>const arr1 = [1, 2, 3];</code>
+			<code> arr1.push(4, 5);</code>
+			<code> console.log(arr1);</code>
+			<h4>pop()</h4>
+			<p>
+				The <em>pop()</em>method is another way to change the data in an array.
+				It is used to pop a value off of the end of an array. The popped off
+				value can then be stored in a variable. So we can pop() removes the LAST
+				element from an array and returns that element
+			</p>
+			<code>const arrOfThree = [1, 3, 5];</code>
+			<code>const removedOne = arrOfThree.pop();</code>
+			<code>console.log(removedOne); //-> 5</code>
+			<code>console.log(arrOfThree); //-> [1, 3]</code>
+			<h4>shift()</h4>
+			<p>
+				The <em>shift()</em> method removes the first element of an array.
+				Similar to the pop() method but removes the first element of the array
+			</p>
+			<code
+				>const ourArray = ["Ibe", "and", "Dupe", "are", "in", "class"];</code
+			>
+			<code
+				>// what's the name of the first student to leave the class, who is left
+				in class?</code
+			>
+			<code>const leavesTheClass = ourArray.shift(); </code>
+			<code>console.log(leavesTheClass); //- 'Ibe' </code>
+			<code>console.log(ourArray); </code>
+			<h4>unshift()</h4>
+			<p>
+				Adds values to the beginning of an array. It works exactly push() but
+				appends values to the beginning of the array
+			</p>
+			<code>const returnedToClass = ourArray.unshift("Ibe");</code>
+			<code>console.log(ourArray);</code>
 		</section>
 	</body>
 </html>

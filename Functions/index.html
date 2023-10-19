@@ -5,12 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../style.css" />
-		<title>Javascript Arrays</title>
+		<title>Javascript Functions</title>
 	</head>
 	<body>
 		<header>
 			<a href="../index.html">Home</a>
-			<h2>Javascript Arrays</h2>
+			<h2>Javascript Functions</h2>
 			<nav>
 				<a href="#reusable-functions">Reusable Functions</a>
 				<a href="#function-arguments">Function Arguments</a>
@@ -28,14 +28,45 @@
 		<section id="reusable-functions">
 			<h3>Reusable Functions</h3>
 			<p>
-				<code></code>
+				Reusable Functions - Allow you to divide up your code into reusable
+				parts called functions. You declare a function using the "function"
+				keyword, followed by the name of the function, parenthesis and curly
+				braces.
+				<code
+					>function functionName() { <br />console.log("Hello World");<br />
+					}</code
+				>
+				<code>console.log(functionName);</code>
+				For the function to work you have to call or invoke the function using
+				its name followed by parenthesis
+				<code>functionName();</code>
+				All the code between the curly braces will be executed every time the
+				function is called
+				<code>
+					functionName();<br />
+					functionName();
+				</code>
 			</p>
 		</section>
 		<section id="function-arguments">
 			<h3>Function Arguments</h3>
 			<p>
-				<code></code>
+				Function Arguments - Functions can accept parameters. These Parameters
+				are variables that act as placeholders for the values that are to be
+				inputs to a function.
 			</p>
+			<p>
+				When a function is defined, it is usually defined along with Parameters.
+			</p>
+			<p>
+				The actual values that are input("passed") into the function when it is
+				called or invoked are know as arguments.
+			</p>
+			<code
+				>function testFn(param1, param2) { <br />console.log(param1, param2);<br />
+				}
+			</code>
+			<code>testFn("Hello", "World");</code>
 		</section>
 		<section id="return-values-from-functions">
 			<h3>Return Values From Functions</h3>

@@ -250,7 +250,7 @@ console.log(prayingCountriesAndPercentageOfPopulation);
 /* Access & Modify Array Data - We can modify and access array data using indexes. Arrays are indexed starting at Zero. The last element of an array is indexed at the length of the array minus one.
  */
 
-/* Access values */
+/* Access Array Data - Array data values can be accessed using their index*/
 // Get the first data element of the burger
 const firstValue = burger[0];
 console.log(firstValue);
@@ -297,12 +297,12 @@ console.log(arrOfThree); //-> [1, 3]
 
 /* shift() - The shift() removes the first element of an array. Similar to the pop() method but removes the first element of the array*/
 const ourArray = ["Ibe", "and", "Dupe", "are", "in", "class"];
-// whats the name of the first student to leave the class, who is left in class?
+// what's the name of the first student to leave the class, who is left in class?
 const leavesTheClass = ourArray.shift();
 console.log(leavesTheClass); //- 'Ibe'
 console.log(ourArray);
 
-/* unshift() - Add values to the beginning  of an array. It works exactly push() but appends values to the beginning of the array*/
+/* unshift() - Adds values to the beginning  of an array. It works exactly push() but appends values to the beginning of the array*/
 const returnedToClass = ourArray.unshift("Ibe");
 console.log(ourArray);
 
@@ -348,7 +348,6 @@ functionName();
 
 /* All the code between the curly braces will be executed every time the function is called
  */
-functionName();
 functionName();
 functionName();
 
