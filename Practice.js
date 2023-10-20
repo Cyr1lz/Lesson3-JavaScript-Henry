@@ -389,3 +389,15 @@ function fnWithArgs(num1, num2) {
 
 fnWithArgs(2, 3);
 fnWithArgs(12, 13);
+
+/* 
+	Returning and Assigning Values From Functions 
+*/
+
+/* 
+	Function Scopes
+*/
+
+/* 
+	Global-Local Function Scope
+*/
