@@ -391,7 +391,7 @@ fnWithArgs(2, 3);
 fnWithArgs(12, 13);
 
 /* 
-	Returning and Assigning Values From Functions 
+	Return and Assign Values From Functions 
 	We already know that we can pass values to functions with arguments. However we can also send values out of a function using the
 	return statement.
 */
@@ -467,7 +467,10 @@ function myLocalScope() {
 myLocalScope();
 //console.log(myLocal); //-> Reference Error!!
 
-/* Example */
+/* 
+Example 
+Write a function called calcTip that takes two arguments, both numbers representing the tip in percentage of amount, and the amount representing the order amount. The function should return the value of the tip in number
+*/
 function calcTip(percentTip, amt) {
 	return amt * (percentTip / 100);
 }
