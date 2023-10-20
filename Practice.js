@@ -392,12 +392,87 @@ fnWithArgs(12, 13);
 
 /* 
 	Returning and Assigning Values From Functions 
+	We already know that we can pass values to functions with arguments. However we can also send values out of a function using the
+	return statement.
 */
+
+function plusFour(num) {
+	return num + 4;
+}
+
+// Notice that we passed a function as argument to the "log" method(function) of the console object.
+console.log(plusFour(6)); //-> 10
+
+/* 
+	We can also assign the return value of a function to a variable;
+*/
+const answerThis = plusFour(10);
+console.log(answerThis); // 14;
 
 /* 
 	Function Scopes
+
+	What is Scope in JavaScript - In JavaScript scope refers to the visibility of variables.
+
+	- Variables which are defined outside of a function block have Global Scope. This means that such variables are visible everywhere in your code.
+
+	- Variables which are declared without let or const keywords are automatically created in Global Scope. This situation can lead to unintended consequences elsewhere in your code or perhaps when calling a function again.
+
+	- In order to avoid issues that touch the heart you should ALWAYS declare your variables using let or const keyword.
 */
+
+var VAT = 7.5; // variable declared in global scope without let or const keyword
+
+var VAT = 5.0; // WARNING!!! variable is re-declared and value is changed !!! code runs without error resulting in a BUG
+
+/* 
+	Exercise
+	Using let or const declare a global variable name myGlobal outside of any function and initialize it with a value of 100.
+*/
+
+let myGlobal = 100;
+
+/* Inside the function fn1 assign 5 to the variable heyGlobal WITHOUT using the var or let or const keywords */
+
+function fn1() {
+	heyGlobal = 5;
+}
+heyGlobal = 7; // Ooops WARNING Global Variable!!!!
+console.log(heyGlobal);
 
 /* 
 	Global-Local Function Scope
+	Local Scope
+	Variables which are declared within a function as well as function parameters, have Local Scope. This means they are visible ONLY within that function.
 */
+
+function testIt() {
+	const temp = "High";
+	console.log(temp); // temp has Local Scope
+}
+testIt();
+// console.log(temp); // temp is not visible - Reference ERROR!!!
+
+/* 
+Exercise
+	Declare a Local variable called myLocal inside of the function myLocalScope and test the visibility of the variable
+*/
+
+function myLocalScope() {
+	const myLocal = "I'm local";
+	console.log(myLocal);
+}
+
+// Tests
+myLocalScope();
+//console.log(myLocal); //-> Reference Error!!
+
+/* Example */
+function calcTip(percentTip, amt) {
+	return amt * (percentTip / 100);
+}
+
+const myTip = calcTip(10, 200);
+console.log("Your tip is " + myTip + " naira");
+
+console.log(amt); //-> WARNING function parameters are Local variables. Reference Error!!
