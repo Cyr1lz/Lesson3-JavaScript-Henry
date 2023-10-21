@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../style.css" />
+		<title>Javascript Functions</title>
+	</head>
+	<body>
+		<header>
+			<a href="../index.html">Home</a>
+			<h2>Javascript Functions</h2>
+			<nav>
+				<a href="#reusable-functions">Reusable Functions</a>
+				<a href="#function-arguments">Function Arguments</a>
+				<a href="#return-assign-values-from-functions"
+					>Return And Assign Values From Functions</a
+				>
+				<a href="#function-scopes">Function Scopes</a>
+			</nav>
+		</header>
+		<section id="reusable-functions">
+			<h3>Reusable Functions</h3>
+			<p>
+				Reusable Functions - Allow you to divide up your code into reusable
+				parts called functions. You declare a function using the "function"
+				keyword, followed by the name of the function, parenthesis and curly
+				braces.
+				<code
+					>function functionName() { <br />console.log("Hello World");<br />
+					}</code
+				>
+				<code>console.log(functionName);</code>
+				For the function to work you have to call or invoke the function using
+				its name followed by parenthesis
+				<code>functionName();</code>
+				All the code between the curly braces will be executed every time the
+				function is called
+				<code>
+					functionName();<br />
+					functionName();
+				</code>
+			</p>
+		</section>
+		<section id="function-arguments">
+			<h3>Function Arguments</h3>
+			<p>
+				Function Arguments - Functions can accept parameters. These Parameters
+				are variables that act as placeholders for the values that are to be
+				inputs to a function.
+			</p>
+			<p>
+				When a function is defined, it is usually defined along with Parameters.
+			</p>
+			<p>
+				The actual values that are input("passed") into the function when it is
+				called or invoked are know as arguments.
+			</p>
+			<code
+				>function testFn(param1, param2) { <br />console.log(param1, param2);<br />
+				}
+			</code>
+			<code>testFn("Hello", "World");</code>
+		</section>
+		<section id="return-assign-values-from-functions">
+			<h3>Return And Assign Values From Functions</h3>
+			<p>
+				We already know that we can pass values to functions with arguments.
+				However we can also send values out of a function using the return
+				statement.
+			</p>
+			<code
+				>function plusFour(num) {<br />
+				&nbsp;return num + 4;<br />
+				}</code
+			>
+			<p>
+				Notice that we passed a function as argument to the "log"
+				method(function) of the console object.
+			</p>
+			<code> console.log(plusFour(6)); //-> 10 </code>
+			<p>We can also assign the return value of a function to a variable</p>
+			<code> const answerThis = plusFour(10); </code>
+			<code>console.log(answerThis); // 14;</code>
+		</section>
+		<section id="function-scopes">
+			<h3>Function Scopes</h3>
+			<p>
+				What is Scope in JavaScript - In JavaScript scope refers to the
+				visibility of variables.
+			</p>
+			<h4>Global Scope</h4>
+			<p>
+				Variables which are defined outside of a function block have Global
+				Scope. This means that such variables are visible everywhere in your
+				code.
+			</p>
+			<p>
+				Variables which are declared without let or const keywords are
+				automatically created in Global Scope. This situation can lead to
+				unintended consequences elsewhere in your code or perhaps when calling a
+				function again.
+			</p>
+			<em>
+				In order to avoid issues that touch the heart you should ALWAYS declare
+				your variables using let or const keyword.
+			</em>
+
+			<code>
+				var VAT = 7.5; // variable declared in global scope without let or const
+				keyword
+			</code>
+			<code>
+				var VAT = 5.0; // WARNING!!! variable is re-declared and value is
+				changed !!! code runs without error resulting in a BUG
+			</code>
+			<h4>Example 1</h4>
+			<p>
+				Using let or const declare a global variable name myGlobal outside of
+				any function and initialize it with a value of 100.
+			</p>
+			<code>let myGlobal = 100; </code>
+			<h4>Example 2</h4>
+			<p>
+				Inside the function fn1 assign 5 to the variable heyGlobal WITHOUT using
+				the var or let or const keywords
+			</p>
+			<code>
+				function fn1() {<br />
+				&nbsp;heyGlobal = 5;<br />
+				}
+			</code>
+			<code> heyGlobal = 7; // Ooops WARNING Global Variable!!!! </code>
+
+			<code> console.log(heyGlobal); //-> 7</code>
+			<h4>Local Scope</h4>
+			<p>
+				Variables which are declared within a function as well as function
+				parameters, have Local Scope. This means they are visible ONLY within
+				that function.
+			</p>
+			<code>
+				function testIt() { <br />&nbsp;const temp = "High";
+				<br />&nbsp;console.log(temp); //-> High - temp has Local Scope and is
+				visible here<br />
+				}
+			</code>
+			<code>testIt();</code>
+			<code>
+				console.log(temp); // temp is not visible here - Reference ERROR!!!
+			</code>
+			<h4>Example 3</h4>
+			<p>
+				Declare a Local variable called myLocal inside of the function
+				myLocalScope and test the visibility of the variable
+			</p>
+			<code>
+				function myLocalScope() { <br />&nbsp;const myLocal = "I'm local";<br />
+				&nbsp;console.log(myLocal); //-> I'm local<br />}
+			</code>
+			<code>
+				// Tests<br />
+				myLocalScope(); <br />console.log(myLocal); //-> Reference Error!!
+			</code>
+			<h4>Example 4</h4>
+			<p>
+				Write a function called calcTip that takes two arguments, both numbers
+				representing the tip in percentage of amount, and the amount
+				representing the order amount. The function should return the value of
+				the tip in number
+			</p>
+			<code>
+				function calcTip(percentTip, amt) {<br />&nbsp; return amt * (percentTip
+				/ 100); <br />}
+			</code>
+			<code> const myTip = calcTip(10, 200); </code>
+			<code>
+				console.log("Your tip is " + myTip + " naira"); //-> Your tip is 20
+				naira</code
+			>
+			<code>
+				console.log(amt); //-> WARNING function parameters are Local variables.
+				Reference Error!!
+			</code>
+		</section>
+	</body>
+</html>

@@ -478,4 +478,132 @@ function calcTip(percentTip, amt) {
 const myTip = calcTip(10, 200);
 console.log("Your tip is " + myTip + " naira");
 
-console.log(amt); //-> WARNING function parameters are Local variables. Reference Error!!
+//console.log(amt); //-> WARNING function parameters are Local variables. Reference Error!!!
+
+/* 
+	Logic Programming 
+	What is Logic in Programming - Logic is the systematic and structured reasoning that programmers use to design algorithms and software.
+
+	- It involves writing a series of instructions that the computer can follow to achieve a specific task or solve a problem.
+
+	- Logic can be expressed using programming constructs such as booleans, conditionals, comparison and mathematical operators, and loops. 
+
+	- The purpose of logic is to control the flow of a program and to make decisions based on data.
+
+	-Good programming logic ensures that a program behaves as intended and produces the desired output.
+*/
+
+/* 
+	Booleans - are a data type that takes only two values True or False; They are like little on-off switches, where True is On and false is Off. The two states are mutually exclusive. In Javascript you NEVER write Boolean values in quotes. "true" and "false" are no longer Boolean and have special meaning in Javascript.
+*/
+
+function welcomeToOurRestaurant() {
+	return true;
+}
+const greetStatus = welcomeToOurRestaurant();
+console.log(greetStatus);
+
+/* 
+	Conditional Logic - This is expressed using the construct of "if statements" the keyword in this case is <if> and it tells Javascript to execute code inside curly braces under specific conditions defined in the parentheses. The conditions are known as Boolean conditions and may only True or False.
+
+	Pseudocode
+	if(condition is true) {
+		execute statement
+	}
+*/
+
+function testAnything(myCondition) {
+	if (myCondition) {
+		return "It is true";
+	}
+	return "It is false";
+}
+
+console.log(testAnything(true));
+console.log(testAnything(false));
+
+/* 
+	Exercise 
+
+	Create a function called trueOrFalse that returns the string "Yes It's true" when the argument is true and returns "No, that's false" when the argument is false; Invoke the function twice with either true or false
+*/
+
+function trueOrFalse(wasThatTrue) {
+	if (wasThatTrue) {
+		return "Yes, It's true";
+	}
+	return "No, that's false";
+}
+
+console.log(trueOrFalse(true));
+console.log(trueOrFalse(false));
+
+/* 
+	Comparison Operators 
+	1. Equality (==)
+	2. Strict Equality (===)
+	3. Inequality (!=)
+	4. Strict Inequality (!==)
+	5. Greater Than (>)
+	6. Greater Than Or Equal To (>=)
+	7. Less Than (<)
+	8. Less Than or Equal To (<=)
+	9. Logical AND (&&);
+	10. Logical OR (||);
+	
+	At the end of the day all the Logical will evaluate to a Boolean.
+
+	- There is a subtle difference between Equality or Inequality and Strict Equality or Inequality. In Javascript the Equality and Inequality test for value only. However Strict Equality and Inequality test for value and data type. 
+
+	- In order for JavaScript to compare values of different data types it converts one type to the other. This is called Type Coercion. Once it does the conversion, then it now makes the comparison.
+
+	- In oder to avoid stories that touch the heart use strict equality or strict inequality where ever possible.
+
+*/
+
+//Example 1
+function checkIfAvailable(color) {
+	const colors = ["red", "green", "orange", "blue", "yellow"];
+	//console.log(colors.includes(color));
+	if (colors.includes(color)) {
+		return "Yes, " + color + " is available";
+	}
+	return "No, " + color + " is NOT available";
+}
+
+let isColorAvailable = "";
+isColorAvailable = checkIfAvailable("red");
+console.log(isColorAvailable);
+isColorAvailable = checkIfAvailable("brown");
+console.log(isColorAvailable);
+
+// Example 2 - Equality
+
+function isEqualTo10(val) {
+	if (val == 10) {
+		return "Equal";
+	}
+	return "Not Equal";
+}
+
+let result = "";
+result = isEqualTo10(10);
+console.log(result);
+
+result = isEqualTo10("10");
+console.log(result); //-> Equal due to Type Coercion
+
+// Example 3
+function isStrictlyEqualTo10(val) {
+	if (val === 10) {
+		return "Equal";
+	}
+	return "Not Equal";
+}
+result = isStrictlyEqualTo10("10");
+console.log(result); //-> Not Equal because of an inequable data type
+
+/* 
+Assignment 
+Demonstrate the comparison operators using a functions that return "Equal" if true or "Not Equal" if false
+*/
