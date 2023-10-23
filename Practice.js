@@ -656,7 +656,7 @@ console.log(testLogicalAND(4));
 console.log(testLogicalAND(2));
 
 /* 
-	Example 4 Logical OR Operator 
+	Example 5 Logical OR Operator 
   
 	Ok Sometimes you want to test more than one thing at a time. The logical OR operator returns true ONLY if either of the operands on the left and right of it evaluate to true.
 
@@ -741,7 +741,6 @@ elseTest(6);
 */
 
 num = 2;
-
 if (num > 20) {
 	console.log("Bigger than 20");
 } else if (num < 10) {

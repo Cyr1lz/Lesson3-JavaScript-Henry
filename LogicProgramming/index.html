@@ -159,6 +159,81 @@
 				result = isStrictlyEqualTo10("10");<br />
 				console.log(result); //-> Not Equal because of an inequable data type
 			</code>
+			<h4>Example 4 Logical AND Operator</h4>
+			<p>
+				Sometimes you want to test more than one thing at a time. The logical
+				AND operator returns true ONLY if the operands on the left and right of
+				it evaluate to true. So if <code>true && true //-> true</code> however
+				<code>false && true //-> false</code>
+			</p>
+			<code>
+				let num = 5;<br />
+				if (num > 2 && num < 8) {<br />
+				&nbsp;console.log("Yes"); <br />}
+			</code>
+			<p>Another example</p>
+			<code>
+				function testLogicalAND(val) {<br />&nbsp; if (val >= 3 && val < 7) {<br />
+				&nbsp;&nbsp;&nbsp;return "Yes"; <br />&nbsp;&nbsp;}
+				<br />&nbsp;&nbsp;return "No"; <br />}
+			</code>
+			<code>console.log(testLogicalAND(4)); //-> "Yes" </code>
+			<code>console.log(testLogicalAND(2)); //-> "No"</code>
+
+			<h4>Example 5 Logical OR Operator</h4>
+			<p>
+				Sometimes you want to test more than one thing at a time. The logical OR
+				operator returns true ONLY if either of the operands on the left and
+				right of it evaluate to true. So if
+				<code>true && false //-> true</code> however
+				<code>false && false //-> false</code>
+			</p>
+			<code
+				>num = 3;<br />
+				if (num > 10 || num < 5) { <br />&nbsp;console.log("No");<br />
+				}</code
+			>
+			<p>Another example</p>
+			<code>
+				function testLogicalOR(val) {<br />&nbsp; if (val > 15 || val <= 10)
+				{<br />&nbsp;&nbsp; return "Outside"; <br />&nbsp;&nbsp;}
+				<br />&nbsp;&nbsp;return "Inside"; <br />}
+			</code>
+			<code> console.log(testLogicalOR(15)) //-> Inside; </code>
+			<code>console.log(testLogicalOR(10)); //-> Outside</code>
+		</section>
+		<section id="else-statement">
+			<h3>The Else statement</h3>
+			<p>
+				We know that when an if statement condition is true, the block of code
+				following it is executed. However what happens if the condition is
+				false? Normally nothing happens. However with an else statement we can
+				execute an alternative block of code.
+			</p>
+			<code>
+				if (num > 12) { <br />
+				&nbsp;&nbsp;console.log("Bigger than 12");<br />
+				} else {
+				<br />&nbsp;&nbsp;console.log("12 or less"); <br />}
+			</code>
+		</section>
+		<section id="else-if-statement">
+			<h3>Else if Statement</h3>
+			<p>
+				If you need to evaluate multiple conditions, then you chain if
+				statements together with the else if statement.
+			</p>
+			<p>
+				Please note that the Order of evaluation in else if statements is
+				important. Since the function is executed from top to bottom. So pay
+				attention to what statement comes first.
+			</p>
+			<code>
+				num = 2;
+				<br />if (num > 20) { <br />&nbsp;console.log("Bigger than 20"); <br />}
+				else if (num < 10) { <br />&nbsp;console.log("smaller than 10"); <br />}
+				else { <br />&nbsp;console.log("between 10 and 20"); <br />}
+			</code>
 		</section>
 	</body>
 </html>
