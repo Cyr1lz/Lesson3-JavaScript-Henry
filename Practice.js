@@ -539,7 +539,7 @@ console.log(trueOrFalse(true));
 console.log(trueOrFalse(false));
 
 /* 
-	Comparison Operators 
+	Comparison Operators - are JavaScript operators which compare operands on the left and right which results in a Boolean. Either True or False 
 	1. Equality (==)
 	2. Strict Equality (===)
 	3. Inequality (!=)
@@ -593,7 +593,7 @@ console.log(result);
 result = isEqualTo10("10");
 console.log(result); //-> Equal due to Type Coercion
 
-// Example 3
+// Example 3 - Strict Equality
 function isStrictlyEqualTo10(val) {
 	if (val === 10) {
 		return "Equal";
