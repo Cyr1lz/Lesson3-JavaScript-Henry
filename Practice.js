@@ -776,3 +776,142 @@ function testElseIf(val) {
 console.log(testElseIf(15));
 console.log(testElseIf(8));
 console.log(testElseIf(4));
+
+/* 
+	Multiple else if statements 
+	
+	You can use multiple else if statements to evaluate multiple conditions at once. For example
+
+	if (condition 1) {
+		statement 1
+	} else if(condition 2) {
+		statement 2
+	} else if (condition 3) {
+		statement 3
+		.....
+	} else {
+		statement N
+	}
+*/
+
+/* 
+	Classwork 
+	Write a function called testMySize that accepts a size as parameter and uses multiple chained if/else if statements to match the following conditions
+
+	num < 5 //-> Tiny
+	num < 10 //-> Small
+	num < 15 //-> Medium
+	num < 20 //-> Large
+	num >= 20 //-> Huge
+
+	Tests
+	1. You should have at least four else ifs statement
+	2. You should have at least one return statement
+
+	testMySize(0) //-> Tiny
+	testMySize(4) //-> Tiny
+	testMySize(5) //-> Small
+	testMySize(8) //-> Small
+	testMySize(10) //-> Medium
+	testMySize(15) //-> Large
+	testMySize(18) //-> Large
+	testMySize(20) //-> Huge
+	testMySize(25) //-> Huge 
+
+*/
+
+/* 
+	The Switch Statement 
+
+	If you need to match a single value against multiple options you can use switch statement. 
+
+	A switch statement compares the value to the "case" statement which define the various possible options.
+
+	Any valid JavaScript statement can be used or executed within the case block. 
+
+	JS will execute code in each case block until it encounters a "break" statement
+
+*/
+
+let flavour = "chocolate";
+
+switch (flavour) {
+	case "strawberry":
+		console.log("I love Strawberry");
+		break;
+	case "vanilla":
+		console.log("I love Vanilla");
+		break;
+	default:
+		console.log("I don't like that flavour");
+}
+
+let r = "";
+
+function myWinningNumber(num) {
+	switch (num) {
+		case 1:
+		case 2:
+		case 3:
+			r = "1, or 2, or 3";
+			break;
+		case 4:
+			r = "4 is lonely";
+	}
+}
+
+myWinningNumber(1);
+console.log(r);
+myWinningNumber(4);
+console.log(r);
+myWinningNumber(3);
+console.log(r);
+myWinningNumber(2);
+console.log(r);
+
+/* 
+Assignment 1 
+Write a function called showRange takes a number as parameter. Use a switch statement to return the appropriate range the number belongs as a string based on the following conditions
+
+1-3 //-> Low
+4-6 //-> Mid
+7-9 //-> High
+
+Test cases
+showRange(1) //-> Low;
+showRange(2) //-> Low;
+showRange(3) //-> Low;
+showRange(4) //-> Mid;
+showRange(5) //-> Mid;
+showRange(6) //-> Mid;
+showRange(7) //-> High;
+showRange(8) //-> High;
+showRange(9) //-> High;
+*/
+
+/* 
+	Assignment 2 
+ Change the following if/else if statements to a switch statement.
+ 
+	function changeToSwitch(arg) {
+		let result = "";
+		if (arg = "dupe") {
+			result = "She is beautiful"
+		} else if (arg <= 20) {
+			result = "You're too young";
+		} else if (arg === "address") {
+			result = "I don't live here"
+		} else if (arg > 20) {
+			 result = "You're old enough "
+		} else if (arg > 80) {
+			result = "Sir, You're a distinguished elder statesman"
+		} else {
+			result = "I don't understand your request"
+		}
+
+		return result;
+	}
+
+	changeToSwitch(21);
+
+*/
