@@ -6,7 +6,7 @@
  3. Create an Object that models the farm.
 
  Tips: 
- 1. Use appropiate variables
+ 1. Use appropriate variables
  2. Model the farm using an Object and output it to console.
 
  let obj = {
@@ -61,7 +61,7 @@ let story =
 console.log(story);
 
 /* 
-Constructing Strings with varaibles
+Constructing Strings with variables
 
 The Fortune Teller
 
@@ -127,7 +127,7 @@ b += 10;
 c += 10;
 console.log(a, b, c);
 /* 
-	Excercise 1 
+	Exercise 1 
 	Use the Subtraction, Multiplication and Division 
 	Compound Assignment Operators to add, subtract and divide each variable by 5
 */
@@ -168,7 +168,7 @@ Everything in JavaScript is an object, and every object has properties and metho
 let lengthOfStr = output.length;
 console.log(lengthOfStr); //-> 86 includes the spaces in between.
 
-/* Find the Nth chracter of a string using the bracket notation
+/* Find the Nth character of a string using the bracket notation
 
 Note
 Generally JavaScript indexes start at 0 NOT 1. What this implies is that counting starts from zero(0). Therefore to access the first letter of a string we would use the index zero(0). 
@@ -242,7 +242,7 @@ const favTeamsAndPositionInLeague = [
 console.log(favTeamsAndPositionInLeague);
 
 const prayingCountriesAndPercentageOfPopulation = [
-	["Afganistan", 96],
+	["Afghanistan", 96],
 	["Nigeria", 95],
 ];
 console.log(prayingCountriesAndPercentageOfPopulation);
@@ -1295,6 +1295,78 @@ const myGarden = [
 
 const secondPlant = "";
 
-/* Assignment(compulsory) - CD Collection */
+/* 
+	Assignment(compulsory) - CD Collection 
+
+	Create a function that helps in the maintenance of a music CD Collection. Organize the collection as an object that contains multiple CDs which are also objects. Each CD must have a unique id as property name to identify it.Within each CD there are various properties describing information about the CD. Not all CDs have complete information.
+
+	DATA
+	--------------------------------------------------
+	|id	 | cdTitle     | artist  | tracks 			   
+	--------------------------------------------------
+	|234 | Unruly      | Olamide | 'Gaza','Jinja'  
+	--------------------------------------------------
+	--------------------------------------------------
+	|254 | Savage      | Rema    | 'DND','Red potion' 
+	--------------------------------------------------
+	--------------------------------------------------
+	|264 | Work Of Art | Asake   | ['2:30']               
+	--------------------------------------------------
+	--------------------------------------------------
+	|284 | I told Them |         |
+	--------------------------------------------------
+
+	A) Based on the Data above create and complete the CD Collection 
+	*/
+const cdCollection = {
+	234: {
+		cdTitle: "Unruly",
+		artist: "Olamide",
+		tracks: ["Gaza", "Jinja"],
+	},
+
+	//-> Add the other CD objects here
+};
+/*
+	B) Create an updateCollection function which 
+	takes 4 arguments represented by the following 
+	parameters:
+
+	CDs - an object containing several individual CD
+	id - a unique number representing a specific CD object
+	prop - a string representing the name of the CD property 
+	to update
+	value - the string containing information used to update 
+	the CD's property
+
+	Complete the function using the following rules to update the object passed to the object
+
+	1. Your function must always return the entire CD collection
+	2. if value is an empty string, delete the given prop property 
+	from the album  
+	3. If prop isn't tracks and value isn't an empty string, 
+	assign the value to that CD's prop
+	4. If the prop is tracks and value isn't an empty string,
+	then update the CD tracks array. 
+	5. If the CD does not have a tracks property,
+	assign it an empty array, then add the value as the last 
+	item in the CD's tracks array.
+
+*/
+function updateCollection(collection, id, prop, value) {
+	return collection;
+}
+
+/* 
+ 	Tests - After calling the updateCollection with the following 
+	parameters the following is the expected outputs
+ */
+console.log(updateCollection(cdCollection, 284, "artist", "Burna Boy")); //-> artist should be the string Burna Boy
+console.log(updateCollection(cdCollection, 284, "tracks", "City Boys")); //-> tracks should have the string City Boys as the last and only element of the tracks array.
+console.log(updateCollection(cdCollection, 234, "artist", "")); //-> artist should not be set
+console.log(updateCollection(cdCollection, 264, "tracks", "Sunshine")); //-> tracks should have the string Sunshine as the last element of the tracks array.
+console.log(updateCollection(cdCollection, 254, "tracks", "Trouble Maker")); //-> tracks should have a length of 3 and string DND as the first element of the tracks array.
+console.log(updateCollection(cdCollection, 234, "tracks", "")); //-> tracks should not be set
+console.log(updateCollection(cdCollection, 254, "cdTitle", "Ravage")); //-> cdTitle should be the string Ravage
 
 /* JavaScript Loops */
