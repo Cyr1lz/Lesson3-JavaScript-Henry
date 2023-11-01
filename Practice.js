@@ -178,7 +178,7 @@ let firstCharacterOfStr = output[0];
 console.log("The first character is " + firstCharacterOfStr + " at index 0");
 console.log("The first character is " + "Hello World"[0] + " at index 0");
 
-/* Excercise 2
+/* Exercise 2
 Extract the 3rd character of the string "Lorem Ipsum Envato Redismuc Satos" */
 
 console.log(
@@ -889,6 +889,29 @@ showRange(8) //-> High;
 showRange(9) //-> High;
 */
 
+function showRange(num) {
+	let result = "";
+	switch (num) {
+		case 1:
+		case 2:
+		case 3:
+			result = "Low";
+			break;
+		case 4:
+		case 5:
+		case 6:
+			result = "Mid";
+			break;
+		case 7:
+		case 8:
+		case 9:
+			result = "High";
+			break;
+	}
+
+	return result;
+}
+console.log(showRange(7));
 /* 
 	Assignment 2 
  Change the following if/else if statements to a switch statement.
@@ -915,3 +938,363 @@ showRange(9) //-> High;
 	changeToSwitch(21);
 
 */
+
+function changeToSwitch(arg) {
+	let result = "";
+	switch (true) {
+		case arg === "dupe":
+			result = "She is beautiful";
+			break;
+		case arg <= 20:
+			result = "You're too young";
+			break;
+		case arg === "address":
+			result = "I don't live here";
+			break;
+		case arg > 20 && arg < 80:
+			result = "You're old enough ";
+			break;
+		case arg >= 80:
+			result = "Sir, You're a distinguished elder statesman";
+			break;
+		default:
+			result = "I don't understand your request";
+			break;
+	}
+	return result;
+}
+
+console.log(changeToSwitch(21));
+
+/*
+Creating Objects 
+	Objects are indeed to similar to Arrays with the exception that instead of using indexes to access and modify data, you access the data or modify in Objects via properties.
+
+	Objects are useful for storing data in a structured form and most importantly they can model or represent real world objects like a car
+*/
+
+const car = {
+	brand: "Toyota",
+	doors: 5,
+	engine: "v4",
+	color: "silver",
+	gear: ["auto", "manual"],
+};
+
+/* 
+Exercise 
+Create a an object that models a pet dog, which has the following properties
+1. name
+2. legs
+3. tail
+4. breed
+5. friends - Array
+*/
+
+/* 
+	Accessing Object Properties
+	There are two ways to access object properties in JavaScript.
+	1. Dot Notation ( . )
+	2. Bracket Notation ( [] )
+
+	- Dot Notation is used when you know the name of the property you are trying access BEFORE HAND.
+
+	- Bracket Notation is used when you are not sure of the name of the property or when the name has space(s) in it.
+
+*/
+
+const FormulaOne = {
+	"formation lap": 2,
+	"black flag": 1,
+	chicane: 10,
+};
+
+/* Example Of Accessing Object Properties Using Bracket Notation */
+let prop = FormulaOne["formation lap"];
+console.log(prop);
+
+/* Example Of Accessing Object Properties Using the Dot Notation */
+prop = FormulaOne.chicane;
+console.log(prop);
+
+/* Example Of Accessing Object Properties With Variables Using The Bracket Notation */
+
+const flag = "black flag";
+const driverTwo = FormulaOne[flag];
+console.log(driverTwo);
+
+/* 
+	Exercise
+	Using the LagosFC Object defined below, access the player number property using the Bracket Notation.
+	The player numbers are 10, 22, 16, 4
+	Log the value to console.
+*/
+const LagosFC = {
+	12: "Papi",
+	10: "Wilfred",
+	16: "Saka",
+};
+
+let playerNum = 22;
+console.log(LagosFC[playerNum]);
+playerNum = 10;
+console.log(LagosFC[playerNum]);
+playerNum = 16;
+console.log(LagosFC[playerNum]);
+playerNum = 4;
+console.log(LagosFC[playerNum]);
+
+/* Working with Objects */
+/*  Updating Object Properties */
+
+const employee = {
+	name: "Babajide",
+	role: "Software Developer",
+	department: "IT",
+};
+
+// Assuming the employee role has changed to Snr Software Developer
+
+employee.role = "Snr Software Developer";
+console.log(employee);
+
+/*  Add new properties to an object */
+// Assuming we want track employee performance
+
+employee["employee performance"] = 85;
+console.log(employee);
+
+/* Delete Properties from an Object */
+// Delete the employee performance property
+
+delete employee["employee performance"];
+console.log(employee);
+
+/* Using Objects for Lookups */
+const blogArticle = {
+	title: "How to create Objects",
+	link: "https://example.com/how-to-create-objects.html",
+	author: "Babajide Ibiayo",
+	tags: ["technlogy", "javascript"],
+	createdAt: "Nov 23, 2023",
+};
+
+const articleAuthor = blogArticle.author;
+const articleLink = blogArticle["link"];
+console.log(articleAuthor);
+console.log(articleLink);
+
+const val = "title";
+// Lookup the value of the variable val in the blogArticle Object
+const valLookup = blogArticle[val];
+console.log(valLookup);
+
+/* This simply means that we can replace multiple chains of switch and if/else with Object Lookups */
+
+/* 
+	ClassWork Assignment
+	Refactor the code below into an Object called lookupColor. Use it to lookup color and assign the associated string to hexCode variable
+*/
+/* function colorLookup(color) {
+	let hexCode = "";
+
+	// Only change code below this line
+	switch (color) {
+		case "white":
+			hexCode = "#ffffff";
+			break;
+		case "black":
+			hexCode = "#000000";
+			break;
+		case "blue":
+			hexCode = "#0000FF";
+			break;
+		case "red":
+			hexCode = "#FF0000";
+			break;
+		case "green":
+			hexCode = "#008000";
+			break;
+		default:
+			hexCode = "Unavailable";
+			break;
+	}
+	//Only change code above this line
+	return hexCode;
+} */
+
+function colorLookup(color) {
+	let hexCode = "";
+
+	// Only change code below this line
+	const lookupColor = {
+		white: "#ffffff",
+		black: "#000000",
+		blue: "#0000FF",
+		red: "#FF0000",
+		green: "#008000",
+	};
+
+	hexCode = lookupColor[color];
+	if (hexCode === undefined) {
+		hexCode = "Unavailable";
+	}
+
+	//Only change code above this line
+	return hexCode;
+}
+
+console.log(colorLookup("blue"));
+console.log(colorLookup("black"));
+console.log(colorLookup("Yellow"));
+
+/* 
+	Testing for Object Properties 
+	
+	You can test for the existence of an object property using the objects hasOwnProperty() method. The method returns a Boolean true if found, or false if not found.		
+*/
+function checkSizeCodes(code) {
+	const sizeCodes = {
+		s: "small",
+		m: "medium",
+		l: "large",
+		xl: "extra large",
+		xxl: "double extra large",
+		xxxl: "triple extra large",
+	};
+	if (sizeCodes.hasOwnProperty(code)) {
+		console.log(sizeCodes[code]);
+	} else {
+		console.log("Not found");
+	}
+	return sizeCodes.hasOwnProperty(code);
+}
+
+checkSizeCodes("s");
+checkSizeCodes("xs");
+
+/* 
+	Working with Complex and Nested Objects 
+
+	Objects are used to create complex and flexible data structures. They allow for arbitrary combinations of strings, numbers, booleans, functions, objects.
+	
+	Here's an example of a music album collection
+*/
+
+const musicAlbumCollection = [
+	{
+		artist: "Asake",
+		title: "Work Of Art",
+		release_year: 2023,
+		formats: ["CD", "mp4"],
+		"total plays": 540388818,
+		genre: "Afrobeats",
+	},
+	{
+		artist: "Rema",
+		title: "Ravage",
+		release_year: 2023,
+		formats: ["CD", "mp4"],
+		"total plays": 2706613,
+		genre: "Afrobeats",
+	},
+];
+
+/* Exercise - add a new to the album to the music collection - artist - Olamide, title - Unruly, release_year - 2023, total plays - 133946549, genre - Afrobeats formats - CD, mp4*/
+
+musicAlbumCollection.push({
+	artist: "Olamide",
+	title: "Unruly",
+	release_year: 2023,
+	formats: ["CD", "mp4"],
+	"total plays": 133946549,
+	genre: "Afrobeats",
+});
+
+console.log(musicAlbumCollection);
+
+/* 
+	Accessing Nested Objects 
+
+	Now sub-properties of objects can be accessed by chaining together the dot or bracket notation
+
+	Here's an example of an Office Storage Object
+
+*/
+
+const officeStorage = {
+	desk: {
+		drawer: "Stationery",
+	},
+	cabinet: {
+		"top drawer": {
+			folder1: "file",
+			folder2: "secrets",
+		},
+		"bottom drawer": "Biscuits",
+	},
+};
+
+const contentFolder2 = officeStorage.cabinet["top drawer"].folder2;
+
+console.log(contentFolder2); //-> secrets
+
+// Exercise - Access the car storage object and assign the contents of the glove box to the gloveBoxContents variable
+
+const carStorage = {
+	inside: {
+		"glove box": "vehicle particulars",
+		"door compartment": "lolipop",
+	},
+	outside: {
+		trunk: "jack",
+	},
+};
+
+const gloveBoxContents = carStorage.inside["glove box"];
+
+console.log(gloveBoxContents); //-> vehicle particulars
+
+/* 
+	Accessing Nested Arrays 
+
+	Similar to objects, array bracket notation can be chained to access nested arrays	
+
+	Here's an example
+*/
+
+const myPets = [
+	{
+		type: "cat",
+		names: ["Carrie", "Kolo", "Kitty"],
+		"fav food": null,
+	},
+	{
+		type: "dog",
+		names: ["Buster"],
+		"fav food": ["Beef", "watermelon"],
+		breed: "Doberman",
+	},
+];
+
+console.log(myPets[0].names[2]); //-> Kitty
+console.log(myPets[1]["fav food"][0]); //-> Beef
+
+// Exercise - Using the dot and bracket notation, set the variable secondPlant to the second item in the trees list from the myGarden Object
+
+const myGarden = [
+	{
+		plant: "flowers",
+		list: ["rose", "....."],
+	},
+	{
+		plant: "trees",
+		list: ["pine", "....."],
+	},
+];
+
+const secondPlant = "";
+
+/* Assignment(compulsory) - CD Collection */
+
+/* JavaScript Loops */
