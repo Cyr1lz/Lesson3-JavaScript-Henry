@@ -1313,10 +1313,10 @@ const secondPlant = "";
 	|264 | Work Of Art | Asake   | ['2:30']               
 	--------------------------------------------------
 	--------------------------------------------------
-	|284 | I told Them |         |
+	|284 | I Told Them |         |
 	--------------------------------------------------
 
-	A) Based on the Data above create and complete the CD Collection 
+	A) Based on the Data above create and complete the CD Collection Object. It will be used for the tests
 	*/
 const cdCollection = {
 	234: {
@@ -1326,6 +1326,10 @@ const cdCollection = {
 	},
 
 	//-> Add the other CD objects here
+
+	284: {
+		cdTitle: "I Told Them",
+	},
 };
 /*
 	B) Create an updateCollection function which 
@@ -1354,11 +1358,15 @@ const cdCollection = {
 
 */
 function updateCollection(collection, id, prop, value) {
+	// Add your code here
+
 	return collection;
 }
 
 /* 
- 	Tests - After calling the updateCollection with the following 
+ 	Tests 
+	- DO NOT modify the cdCollections Object used for the tests.
+	- After calling the updateCollection with the following 
 	parameters the following is the expected outputs
  */
 console.log(updateCollection(cdCollection, 284, "artist", "Burna Boy")); //-> artist should be the string Burna Boy
