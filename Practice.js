@@ -1377,4 +1377,90 @@ console.log(updateCollection(cdCollection, 254, "tracks", "Trouble Maker")); //-
 console.log(updateCollection(cdCollection, 234, "tracks", "")); //-> tracks should not be set
 console.log(updateCollection(cdCollection, 254, "cdTitle", "Ravage")); //-> cdTitle should be the string Ravage
 
-/* JavaScript Loops */
+/* 
+JavaScript Loops
+ Loops - Are language constructs that allow you to run the SAME code multiple times.
+*/
+
+/* 
+	While Loop - The While loop runs while a specific condition is true. It stops once that condition is no longer true. i.e when the condition becomes false.
+
+	while (condition is true) {
+		Execute Statements
+	}
+
+	Note: Warning!!! Using the while loop may result in an infinite loop if the condition will never become false. ex
+	
+	while (true) { // This condition will NEVER be false. Hence Infinite Loop.
+		// Execute statement
+s	}
+*/
+let z = 0;
+while (z < 5) {
+	console.log(z);
+	z++;
+}
+
+// Exercise - Add the numbers 5 through 0(inclusive) in descending order to an Array called range5 using a while loop. //-> [5, 4, 3, 2, 1, 0];
+
+const range5 = [];
+let n = 5;
+
+while (n >= 0) {
+	range5.push(n);
+	n--;
+}
+
+console.log(range5);
+
+/* 
+	For Loop - A for loop can also execute code multiple times. However a for loop runs only for a specific number of times.
+
+	For loops are usually declared with three optional expressions separated by semicolons;
+
+	for (a; b; c) {
+		// Statements
+	}
+
+	where 
+	a - initialization statement
+	b - condition statement
+	c - final expression
+
+	The initialization statement is executed once before the start of the loop and is typically used to define and setup the loop variable
+
+	The condition statement is evaluated at the beginning of every loop iteration and will continue as long as the condition is true. When condition is false at the start of iteration, the loop stop executing. This implies that if the condition starts at false, the loop will never execute. 
+
+	The final expression is executed at the end of every iteration, but before the next condition check and it is usually used to decrement or increment the loop counter
+*/
+
+const rangeOf5 = [];
+
+for (let i = 0; i < 5; i++) {
+	rangeOf5.push(i);
+}
+console.log(rangeOf5);
+
+//Exercise - Use a for loop to push values 1 through 5 onto myArray //-> [1, 2, 3, 4, 5]
+
+const myArray = [];
+for (let i = 1; i <= 5; i++) {
+	myArray.push(i);
+}
+console.log(myArray);
+
+// ExerciseA - Use a for loop to push even numbers between 0 and 10 into an array called evenNumbers.
+
+const evenNumbers = [];
+
+// Add your code here
+
+console.log(evenNumbers); //-> [0, 2, 4, 8]
+
+// ExerciseB - Use a for loop to push even numbers between 1 and 9 into an array called oddNumbers.
+
+const oddNumbers = [];
+
+// Add your code here
+
+console.log(oddNumbers); //-> [1, 3, 5, 7, 9]
