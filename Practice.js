@@ -1499,17 +1499,18 @@ for (let i = 0; i < arr.length; i++) {
 
 const myNumbers = [2, 4, 6, 8, 10];
 
-const total = 0;
+let total = 0;
 
 // Add your code below this line
-
+for (let i = 0; i < myNumbers.length; i++) {
+	total += myNumbers[i];
+}
 console.log(total); //-> 30
 
 /* 
 	Iterating through multi-dimensional arrays using Nested For Loops 
 	
 	You can iterate through multi-dimensional arrays using nested for loops. Here's an example
-
 */
 
 // Example
@@ -1519,6 +1520,17 @@ const md_arr = [
 	[5, 6],
 ];
 
+const md_arr_flat = [];
+// Loops through the parent array
+for (let i = 0; i < md_arr.length; i++) {
+	//Loops through the sub-arrays
+	for (let j = 0; j < md_arr[j].length; j++) {
+		md_arr_flat.push(md_arr[i][j]);
+	}
+}
+
+console.log(md_arr_flat); //-> [1, 2, 3, 4, 5, 6]
+
 /* Exercise - Create a function called multiplyAllPrices that returns the product of all numbers in the sub-arrays of the prices array
  */
 
@@ -1526,6 +1538,11 @@ function multiplyAllPrices(arrOfPrices) {
 	let product = 1;
 
 	//Add your code below here
+	for (let i = 0; i < arrOfPrices.length; i++) {
+		for (let j = 0; j < arrOfPrices[i].length; j++) {
+			product *= arrOfPrices[i][j];
+		}
+	}
 
 	return product;
 }
@@ -1538,4 +1555,28 @@ console.log(
 		[1.99, 2.78],
 		[4.5, 5.5],
 	])
-);
+); //-> 16,220.744427306
+
+/* 
+	Do While Loop is similar to the while loop
+	with on exception. The loop will first do one pass of the code inside of the loop, no what matter what, and the continue to run the while loop as long as the specified condition is true. 
+
+	 let i = 0; // Initialization statement
+	do {
+		// Statements
+		i++ //increment or decrement of final expression
+	} while (condition is true)
+*/
+
+// Example - push numbers 1 to 5 inside the array called arrayOfFive
+
+const arrayOfFive = [];
+
+let p = 1;
+
+do {
+	arrayOfFive.push(p);
+	p++;
+} while (p <= 5);
+
+console.log(arrayOfFive);
