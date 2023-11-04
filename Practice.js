@@ -1449,18 +1449,93 @@ for (let i = 1; i <= 5; i++) {
 }
 console.log(myArray);
 
-// ExerciseA - Use a for loop to push even numbers between 0 and 10 into an array called evenNumbers.
+// Exercise A - Use a for loop to push even numbers between 0 and 10 into an array called evenNumbers.
 
 const evenNumbers = [];
 
 // Add your code here
+for (let i = 0; i < 10; i += 2) {
+	evenNumbers.push(i);
+}
 
 console.log(evenNumbers); //-> [0, 2, 4, 8]
 
-// ExerciseB - Use a for loop to push even numbers between 1 and 9 into an array called oddNumbers.
+// Exercise B - Use a for loop to push even numbers between 1 and 9 into an array called oddNumbers.
 
 const oddNumbers = [];
 
 // Add your code here
-
+for (let i = 1; i < 10; i += 2) {
+	oddNumbers.push(i);
+}
 console.log(oddNumbers); //-> [1, 3, 5, 7, 9]
+
+//Exercise C - Use a for loop to push even numbers from 10 to 2 into an array called reversedEvenNumbers
+
+const reversedEvenNumbers = [];
+
+// Add your code here
+for (let i = 10; i > 0; i -= 2) {
+	reversedEvenNumbers.push(i);
+}
+console.log(reversedEvenNumbers); //-> [10, 8, 6, 4, 2]
+
+/* 
+	Iterating Arrays with For Loops
+	
+	It's common to iterate through an array using a for loop. This is done by using the length property of an array in the condition statement. 
+
+	Remember that arrays are zero-based indexing, so the last index of the array is arr.length - 1.
+
+*/
+// Example
+const arr = [8, 7, 6, 5, 4];
+
+for (let i = 0; i < arr.length; i++) {
+	console.log(arr[i]);
+}
+
+// Exercise D - Use a For loop to find the sum of the numbers in the given array and store the sum in a variable called total.
+
+const myNumbers = [2, 4, 6, 8, 10];
+
+const total = 0;
+
+// Add your code below this line
+
+console.log(total); //-> 30
+
+/* 
+	Iterating through multi-dimensional arrays using Nested For Loops 
+	
+	You can iterate through multi-dimensional arrays using nested for loops. Here's an example
+
+*/
+
+// Example
+const md_arr = [
+	[1, 2],
+	[3, 4],
+	[5, 6],
+];
+
+/* Exercise - Create a function called multiplyAllPrices that returns the product of all numbers in the sub-arrays of the prices array
+ */
+
+function multiplyAllPrices(arrOfPrices) {
+	let product = 1;
+
+	//Add your code below here
+
+	return product;
+}
+
+//Test
+console.log(
+	multiplyAllPrices([
+		[1.99, 2.99],
+		[3.99, 4.99],
+		[1.99, 2.78],
+		[4.5, 5.5],
+	])
+);
