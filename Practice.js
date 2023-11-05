@@ -1324,9 +1324,16 @@ const cdCollection = {
 		artist: "Olamide",
 		tracks: ["Gaza", "Jinja"],
 	},
-
-	//-> Add the other CD objects here
-
+	254: {
+		cdTitle: "Savage",
+		artist: "Rhema",
+		tracks: ["DND", "Red potion"],
+	},
+	264: {
+		cdTitle: "Work Of Art",
+		artist: "Asake",
+		tracks: ["2:30"],
+	},
 	284: {
 		cdTitle: "I Told Them",
 	},
@@ -1359,6 +1366,28 @@ const cdCollection = {
 */
 function updateCollection(collection, id, prop, value) {
 	// Add your code here
+	if (value === "" && cdCollection[id].hasOwnProperty(prop)) {
+		delete cdCollection[id][prop];
+	}
+
+	if (prop !== "tracks" && value !== "") {
+		cdCollection[id][prop] = value;
+	}
+
+	if (cdCollection[id].hasOwnProperty("tracks") === false && value !== "") {
+		cdCollection[id]["tracks"] = [];
+		cdCollection[id]["tracks"].push(value);
+	} else if (
+		cdCollection[id].hasOwnProperty("tracks") === true &&
+		prop !== "cdTitle" &&
+		value !== ""
+	) {
+		cdCollection[id]["tracks"].push(value);
+	}
+
+	if (cdCollection[id].hasOwnProperty("tracks") === false) {
+		cdCollection[id]["tracks"] = value;
+	}
 
 	return collection;
 }
@@ -1580,3 +1609,100 @@ do {
 } while (p <= 5);
 
 console.log(arrayOfFive);
+
+/* 
+Assignment Customer Profile Lookup 
+
+A flourishing Restaurant in Lagos keeps a record of customer profile data and their food preferences in a simple excel file called customers.xls.
+
+You have hired as a consultant to develop a simple customer profile lookup program that takes a customer first name and metadata as inputs, and verify if the customer name and given metadata exist. 
+
+If both first name and metadata are true and verified the program should return the value of the metadata.
+
+If the first name does not exist or correspond to any customer then the program should return "No such customer"
+
+If the given metadata does not 
+correspond to any valid customer metadata field or property for the given name, the program should return "No such metadata"
+
+Instructions
+
+1. Write a function called lookupCustomer, that takes customer first name, and a given property as arguments and returns the value of the given property e.g 
+
+function lookupCustomerProfile(name, prop) {
+	....
+
+	return "Something"
+}
+*/
+
+function lookupCustomer(name, prop) {
+	const customers = [
+		{
+			firstName: "Robert",
+			lastName: "Smith",
+			email: "r.smith@live.com",
+			phone: "+12074567890",
+			likes: ["Roasted Beef", "potato fries", "Curry Soup"],
+		},
+		{
+			firstName: "James",
+			lastName: "Green",
+			email: "j.green@live.com",
+			phone: "+12081569890",
+			likes: ["Fried Beef", "potato fries", "curry soup"],
+		},
+		{
+			firstName: "Mary",
+			lastName: "Brown",
+			email: "b.brown@gmail.com",
+			phone: "+12078577990",
+			likes: ["roasted beef", "pasta", "onion soup"],
+		},
+		{
+			firstName: "Alan",
+			lastName: "Stone",
+			email: "a.stone@live.com",
+			phone: "+12068967870",
+			likes: ["roasted beef", "potato fries", "curry soup"],
+		},
+		{
+			firstName: "Linda",
+			lastName: "Thomas",
+			email: "lthomas23@gmail.com",
+			phone: "+12068864550",
+			likes: ["corn beef", "potato fries", "mushroom soup"],
+		},
+		{
+			firstName: "Mathew",
+			lastName: "Gala",
+			email: "gallawy23@yahoo.com",
+			phone: "+1604467789",
+			likes: ["fried chicken", "plantain fries", "mixed soup"],
+		},
+		{
+			firstName: "Samantha",
+			lastName: "Knox",
+			email: "s.knox@live.com",
+			phone: "+1604576439",
+			likes: ["Roasted Beef", "potato fries", "Curry Soup"],
+		},
+	];
+	// Add code below this line
+
+	return "No such customer";
+}
+
+//Tests
+console.log(lookupCustomer("Samantha", "lastName")); //-> Knox
+
+console.log(lookupCustomer("James", "email")); //-> j.green@live.com
+
+console.log(lookupCustomer("Robert", "likes")); //-> ['Roasted Beef', 'potato fries', 'Curry Soup']
+
+console.log(lookupCustomer("Mathew", "phone"));
+
+console.log(lookupCustomer("Mary", "favorite")); //-> No such metadata
+
+// Edge Cases:
+console.log(lookupCustomer("", "")); //-> No such customer
+console.log(lookupCustomer()); //-> No such customer
