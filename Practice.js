@@ -1699,10 +1699,159 @@ console.log(lookupCustomer("James", "email")); //-> j.green@live.com
 
 console.log(lookupCustomer("Robert", "likes")); //-> ['Roasted Beef', 'potato fries', 'Curry Soup']
 
-console.log(lookupCustomer("Mathew", "phone"));
+console.log(lookupCustomer("Mathew", "phone")); //-> +1604467789
 
 console.log(lookupCustomer("Mary", "favorite")); //-> No such metadata
 
 // Edge Cases:
 console.log(lookupCustomer("", "")); //-> No such customer
 console.log(lookupCustomer()); //-> No such customer
+
+/* 
+	Random Numbers in JavaScript 
+
+	Random numbers are useful for simulating random behavior. JavaScript has the Math.random() method which generates random numbers between 0(inclusive) and 1(exclusive). This implies it returns decimal numbers between 0 and 1.
+
+*/
+
+function generateRandomNumber() {
+	return Math.random();
+}
+
+console.log(generateRandomNumber());
+
+/* 
+	Random Whole Numbers 
+
+	You can generate random whole numbers in a range from zero - or from a different lower number - to a given number.
+
+	For instance let's say min is your minimum number and max is your maximum number
+
+	The formula below gives a random whole number in the range min to max
+
+	Math.random() * (max - min + 1) + min;
+*/
+
+function generateRandomRange(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+console.log(generateRandomRange(2, 5));
+
+/* 
+	The parseInt Function 
+	
+	parseInt() function parses a string and returns an integer.
+
+	Caveats: 
+	If the first character of the string can't converted to a number, it will return NaN
+*/
+
+// Example
+
+const myInt = parseInt("007");
+console.log(myInt);
+
+//Exercise - Write a function called convertToInteger that takes a string as input and returns an integer
+
+function convertToInteger(str) {
+	return parseInt(str);
+}
+console.log(convertToInteger("75")); //-> 75
+console.log(typeof convertToInteger("75")); //-> number
+
+/* 
+	ParseInt Function with Radix 
+
+	The parseInt function also takes a second argument called the Radix, which specifies the base of the number. The radix can be an integer between 2 and 36
+
+	parseInt(string, radix);
+*/
+
+//Example
+const binaryToInteger = parseInt("11", 2);
+console.log(binaryToInteger); //-> 3
+
+/* 
+
+Ternary Operator 
+
+The Ternary operator is a conditional of operator which can be used - rather gracefully - to replace a single if / else expression
+
+x ? y : z
+
+where 
+
+x is the condition
+y is the code to run when the condition returns true
+z is the code to run when the condition returns false
+
+*/
+
+// Example
+
+function findGreaterNum(a, b) {
+	return a > b ? a + " is greater" : b + " is greater or equal";
+
+	/* if (a > b) {
+		return a + " is greater";
+	} else {
+		return b + " is greater or equal";
+	} */
+}
+
+console.log(findGreaterNum(5, 4));
+
+// Using Multiple Conditional Ternary Operators
+
+function findGreaterOrEqualNum(a, b) {
+	return a === b
+		? a + " and " + b + " are equal"
+		: a > b
+		? a + " is greater"
+		: b + " is greater";
+	/* if (a === b) {
+		return a + " and " + b + " are equal";
+	} else if (a > b) {
+		return a + " is greater";
+	} else {
+		return b + " is greater";
+	} */
+}
+
+console.log(findGreaterOrEqualNum(5, 8));
+
+/* 
+Introduction to Recursion 
+
+Recursion is a concept that a function can be expressed in terms of itself. So this conceptually implies that a function can invoke itself repeatedly. 
+
+Given a task to multiply the first N elements of an array to return a product of all the items in the array. To do this we could use a For Loop
+*/
+
+//Example
+/* 
+	Did you notice that 
+
+	multiplyNums(arr, num) == multiplyNums(arr, num - 1) * arr[num - 1]
+
+	fn(2 + 3) == fn(2) + fn(3)
+*/
+
+function multiplyNums(arr, num) {
+	if (num <= 0) {
+		return 1;
+	} else {
+		return multiplyNums(arr, num - 1) * arr[num - 1];
+	}
+
+	/* let product = 1;
+	for (let i = 0; i < num; i++) {
+		product *= arr[i];
+	}
+	return product; */
+}
+
+console.log(multiplyNums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)); //-> 24
+
+/* The Document Object Model */
