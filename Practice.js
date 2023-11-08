@@ -1688,7 +1688,15 @@ function lookupCustomer(name, prop) {
 		},
 	];
 	// Add code below this line
-
+	for (let i = 0; i < customers.length; i++) {
+		if (customers[i]["firstName"] === name) {
+			if (customers[i].hasOwnProperty(prop)) {
+				return customers[i][prop];
+			} else {
+				return "No such metadata";
+			}
+		}
+	}
 	return "No such customer";
 }
 
