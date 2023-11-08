@@ -1688,19 +1688,24 @@ function lookupCustomer(name, prop) {
 		},
 	];
 	// Add code below this line
+
 	for (let i = 0; i < customers.length; i++) {
 		if (customers[i]["firstName"] === name) {
-			if (customers[i].hasOwnProperty(prop)) {
+			return customers[i].hasOwnProperty(prop)
+				? customers[i][prop]
+				: "No such metadata";
+
+			/* if (customers[i].hasOwnProperty(prop)) {
 				return customers[i][prop];
 			} else {
 				return "No such metadata";
-			}
+			} */
 		}
 	}
 	return "No such customer";
 }
 
-//Tests
+//Tests+
 console.log(lookupCustomer("Samantha", "lastName")); //-> Knox
 
 console.log(lookupCustomer("James", "email")); //-> j.green@live.com
@@ -1862,4 +1867,21 @@ function multiplyNums(arr, num) {
 
 console.log(multiplyNums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)); //-> 24
 
-/* The Document Object Model */
+/* 
+	The Document Object Model (DOM) 
+
+	The DOM is the data representation of the objects that comprise the structure and content of a document on the web. In this case we would be looking at how the DOM represents an HTML document in memory and how to use Web APIs to manipulate and create web content and applications.
+
+	The DOM is a programming interface for web documents e.g HTML documents. It models a web page so that programs can change the structure (HTML), style (CSS), and Content
+
+	The DOM models or represents the document nodes and objects.
+
+	The nodes are entries in the tree structure and they represent elements (identified as HTML, HEAD, META, BODY and so on) and others represented as text or "content" known as leaf nodes.
+
+	The different types of Nodes
+	1. Root Node
+	2. Child Node
+	3. Descendant Node
+	4. Parent Node
+	5. Sibling Node
+*/
