@@ -100,3 +100,42 @@ console.log(preference);
 
 3. Template Literals allow for interpolation of variables into strings using the construct ${variable}. Notice how this is used in the example to interpolate the values of the properties of the ice cream object. You can also include expressions.
 */
+
+/* Inserting a new line character in template strings 
+
+Often when working with string you may want to output strings on new separate lines. e.g
+
+Orange
+Banana
+Carrot
+
+When building strings, you can use the special new line character \n to insert a new line between strings.
+
+Other special characters allowed in JavaScript strings include
+\t - inserts a new tab
+\\ - inserts backslash
+\b - inserts backspace
+\"" - inserts double quotes
+\' - inserts single quotes
+\f - inserts form feed
+\r - inserts carriage return
+\n - inserts new line
+
+They all start with with a backslash character (\) and are often called escape characters.
+
+Example
+*/
+
+const items = ["Orange", "Banana", "Carrot"];
+
+function displayShoppingList(arr) {
+	let output = "My Shopping List\n";
+
+	for (let i = 0; i < arr.length; i++) {
+		output += `${arr[i]}\n`;
+	}
+
+	console.log(output);
+}
+
+displayShoppingList(items);

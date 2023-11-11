@@ -1934,8 +1934,13 @@ function addLabel(label, str) {
 
 /* Write the function displayInventory(item1, item2, item3) */
 
-function displayInventory(item1, item2, item3) {
-	return "Inventory";
+function displayInventory(arr) {
+	let inventory = "";
+	for (let i = 0; i < arr.length; i++) {
+		// Pad with zero and add label
+		inventory += `${addLabel(arr[i][1], padWithThreeZeros(arr[i][0]))}\n`;
+	}
+	console.log(inventory);
 }
 
 /* function printFarmInventory(cows, chickens, pigs) {
@@ -1957,10 +1962,12 @@ function printFarmInventory(cows, chickens, pigs) {
 	let cowString = String(cows);
 	let chickenString = String(chickens);
 	let pigString = String(pigs);
-
-	const inventory = displayInventory(cowString, chickenString, pigString);
-
-	console.log(inventory);
+	let data = [
+		[cowString, "Cows"],
+		[chickenString, "Chicken"],
+		[pigString, "Pigs"],
+	];
+	displayInventory(data);
 }
 
 printFarmInventory(8, 12, 5);
