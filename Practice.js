@@ -33,30 +33,30 @@ let address = streetAddress + " " + city + " " + state + ".";
 console.log(address);
 
 let farm = {
-  lengthOfFarm: farmLength,
-  widthOfFarm: farmWidth,
-  numOfChickens: 50,
-  numOfGoats: 10,
-  numOfFishPonds: 2,
-  addressOfFarm: address,
+	lengthOfFarm: farmLength,
+	widthOfFarm: farmWidth,
+	numOfChickens: 50,
+	numOfGoats: 10,
+	numOfFishPonds: 2,
+	addressOfFarm: address,
 };
 
 console.log(farm);
 
 let story =
-  "A farmer has a farm located at " +
-  farm.addressOfFarm +
-  " The farm is " +
-  farm.lengthOfFarm +
-  "sqm in length and " +
-  farm.widthOfFarm +
-  "sqm in width. He has " +
-  farm.numOfChickens +
-  " chickens, " +
-  farm.numOfGoats +
-  " goats, and " +
-  farm.numOfFishPonds +
-  " fish ponds.";
+	"A farmer has a farm located at " +
+	farm.addressOfFarm +
+	" The farm is " +
+	farm.lengthOfFarm +
+	"sqm in length and " +
+	farm.widthOfFarm +
+	"sqm in width. He has " +
+	farm.numOfChickens +
+	" chickens, " +
+	farm.numOfGoats +
+	" goats, and " +
+	farm.numOfFishPonds +
+	" fish ponds.";
 
 console.log(story);
 
@@ -80,15 +80,15 @@ let jobTitle = "Software Developer";
 let output = "";
 
 output =
-  "You will be a " +
-  jobTitle +
-  " in " +
-  myLocation +
-  ", and married to " +
-  partnersName +
-  " with " +
-  numOfChildren +
-  " kids.";
+	"You will be a " +
+	jobTitle +
+	" in " +
+	myLocation +
+	", and married to " +
+	partnersName +
+	" with " +
+	numOfChildren +
+	" kids.";
 
 console.log(output);
 
@@ -177,21 +177,21 @@ Generally JavaScript indexes start at 0 NOT 1. What this implies is that countin
 
 let firstCharacterOfStr = output[0];
 console.log("The first character is " + firstCharacterOfStr + " at index 0");
-console.log("The first character is " + "Hello World" [0] + " at index 0");
+console.log("The first character is " + "Hello World"[0] + " at index 0");
 
 /* Exercise 2
 Extract the 3rd character of the string "Lorem Ipsum Envato Redismuc Satos" */
 
 console.log(
-  "The third character is " +
-  "Lorem Ipsum Envato Redismuc Satos" [2] +
-  " at index 2"
+	"The third character is " +
+		"Lorem Ipsum Envato Redismuc Satos"[2] +
+		" at index 2"
 );
 
 console.log(
-  "The eight character is " +
-  "Lorem Ipsum Envato Redismuc Satos" [7] +
-  " at index 7"
+	"The eight character is " +
+		"Lorem Ipsum Envato Redismuc Satos"[7] +
+		" at index 7"
 );
 
 /* Find the last character of a string using the bracket notation */
@@ -203,9 +203,9 @@ ourString = "Ibe";
 let endOfString = ourString.length - 1;
 let i = 0;
 while (i <= endOfString) {
-  // Do something
-  console.log(ourString[i]);
-  i++;
+	// Do something
+	console.log(ourString[i]);
+	i++;
 }
 
 /* Exercise 3
@@ -338,7 +338,7 @@ console.log(shoppingList);
 	Example
 */
 function functionName() {
-  console.log("Hello World");
+	console.log("Hello World");
 }
 
 console.log(functionName);
@@ -357,7 +357,7 @@ functionName();
 	2. Call the function twice.
 */
 function greet() {
-  console.log("Hi Babajide");
+	console.log("Hi Babajide");
 }
 
 greet();
@@ -371,7 +371,7 @@ Function Arguments
 */
 
 function testFn(param1, param2) {
-  console.log(param1, param2);
+	console.log(param1, param2);
 }
 
 testFn("Hello", "World");
@@ -385,7 +385,7 @@ testFn("Hello", "World");
 */
 
 function fnWithArgs(num1, num2) {
-  console.log(num1 + num2);
+	console.log(num1 + num2);
 }
 
 fnWithArgs(2, 3);
@@ -398,7 +398,7 @@ fnWithArgs(12, 13);
 */
 
 function plusFour(num) {
-  return num + 4;
+	return num + 4;
 }
 
 // Notice that we passed a function as argument to the "log" method(function) of the console object.
@@ -436,7 +436,7 @@ let myGlobal = 100;
 /* Inside the function fn1 assign 5 to the variable heyGlobal WITHOUT using the var or let or const keywords */
 
 function fn1() {
-  heyGlobal = 5;
+	heyGlobal = 5;
 }
 heyGlobal = 7; // Ooops WARNING Global Variable!!!!
 console.log(heyGlobal);
@@ -448,8 +448,8 @@ console.log(heyGlobal);
 */
 
 function testIt() {
-  const temp = "High";
-  console.log(temp); // temp has Local Scope
+	const temp = "High";
+	console.log(temp); // temp has Local Scope
 }
 testIt();
 // console.log(temp); // temp is not visible - Reference ERROR!!!
@@ -460,8 +460,8 @@ Exercise
 */
 
 function myLocalScope() {
-  const myLocal = "I'm local";
-  console.log(myLocal);
+	const myLocal = "I'm local";
+	console.log(myLocal);
 }
 
 // Tests
@@ -473,7 +473,7 @@ Example
 Write a function called calcTip that takes two arguments, both numbers representing the tip in percentage of amount, and the amount representing the order amount. The function should return the value of the tip in number
 */
 function calcTip(percentTip, amt) {
-  return amt * (percentTip / 100);
+	return amt * (percentTip / 100);
 }
 
 const myTip = calcTip(10, 200);
@@ -499,7 +499,7 @@ console.log("Your tip is " + myTip + " naira");
 */
 
 function welcomeToOurRestaurant() {
-  return true;
+	return true;
 }
 const greetStatus = welcomeToOurRestaurant();
 console.log(greetStatus);
@@ -514,10 +514,10 @@ console.log(greetStatus);
 */
 
 function testAnything(myCondition) {
-  if (myCondition) {
-    return "It is true";
-  }
-  return "It is false";
+	if (myCondition) {
+		return "It is true";
+	}
+	return "It is false";
 }
 
 console.log(testAnything(true));
@@ -530,10 +530,10 @@ console.log(testAnything(false));
 */
 
 function trueOrFalse(wasThatTrue) {
-  if (wasThatTrue) {
-    return "Yes, It's true";
-  }
-  return "No, that's false";
+	if (wasThatTrue) {
+		return "Yes, It's true";
+	}
+	return "No, that's false";
 }
 
 console.log(trueOrFalse(true));
@@ -573,12 +573,12 @@ console.log(trueOrFalse(false));
 
 //Example 1
 function checkIfAvailable(color) {
-  const colors = ["red", "green", "orange", "blue", "yellow"];
-  //console.log(colors.includes(color));
-  if (colors.includes(color)) {
-    return "Yes, " + color + " is available";
-  }
-  return "No, " + color + " is NOT available";
+	const colors = ["red", "green", "orange", "blue", "yellow"];
+	//console.log(colors.includes(color));
+	if (colors.includes(color)) {
+		return "Yes, " + color + " is available";
+	}
+	return "No, " + color + " is NOT available";
 }
 
 let isColorAvailable = "";
@@ -590,10 +590,10 @@ console.log(isColorAvailable);
 // Example 2 - Equality
 
 function isEqualTo10(val) {
-  if (val == 10) {
-    return "Equal";
-  }
-  return "Not Equal";
+	if (val == 10) {
+		return "Equal";
+	}
+	return "Not Equal";
 }
 
 let result = "";
@@ -605,10 +605,10 @@ console.log(result); //-> Equal due to Type Coercion
 
 // Example 3 - Strict Equality
 function isStrictlyEqualTo10(val) {
-  if (val === 10) {
-    return "Equal";
-  }
-  return "Not Equal";
+	if (val === 10) {
+		return "Equal";
+	}
+	return "Not Equal";
 }
 result = isStrictlyEqualTo10("10");
 console.log(result); //-> Not Equal because of an inequable data type
@@ -628,7 +628,7 @@ Demonstrate the comparison operators using a functions that return "Equal" if tr
 */
 let num = 5;
 if (num > 2 && num < 8) {
-  console.log("Yes");
+	console.log("Yes");
 }
 /* console.log("No"); */
 
@@ -647,10 +647,10 @@ function testLogicalAND(val) {
 */
 
 function testLogicalAND(val) {
-  if (val >= 3 && val < 7) {
-    return "Yes";
-  }
-  return "No";
+	if (val >= 3 && val < 7) {
+		return "Yes";
+	}
+	return "No";
 }
 
 console.log(testLogicalAND(4));
@@ -666,7 +666,7 @@ console.log(testLogicalAND(2));
 
 num = 3;
 if (num > 10 || num < 5) {
-  console.log("No");
+	console.log("No");
 }
 /* console.log("Yes"); */
 
@@ -685,10 +685,10 @@ function testLogicalOR(val) {
 */
 
 function testLogicalOR(val) {
-  if (val > 15 || val <= 10) {
-    return "Outside";
-  }
-  return "Inside";
+	if (val > 15 || val <= 10) {
+		return "Outside";
+	}
+	return "Inside";
 }
 console.log(testLogicalOR(15));
 console.log(testLogicalOR(10));
@@ -699,9 +699,9 @@ Else Statement
 */
 
 if (num > 12) {
-  console.log("Bigger than 12");
+	console.log("Bigger than 12");
 } else {
-  console.log("12 or less");
+	console.log("12 or less");
 }
 
 /* 
@@ -720,13 +720,13 @@ function elseTest(val) {
 }
 */
 function elseTest(val) {
-  let r = "";
-  if (val > 4) {
-    r = "Bigger than 4";
-  } else {
-    r = "4 or Smaller";
-  }
-  console.log(r);
+	let r = "";
+	if (val > 4) {
+		r = "Bigger than 4";
+	} else {
+		r = "4 or Smaller";
+	}
+	console.log(r);
 }
 
 elseTest(3);
@@ -743,11 +743,11 @@ elseTest(6);
 
 num = 2;
 if (num > 20) {
-  console.log("Bigger than 20");
+	console.log("Bigger than 20");
 } else if (num < 10) {
-  console.log("smaller than 10");
+	console.log("smaller than 10");
 } else {
-  console.log("between 10 and 20");
+	console.log("between 10 and 20");
 }
 
 /* 
@@ -765,13 +765,13 @@ if (num > 20) {
 */
 
 function testElseIf(val) {
-  if (val >= 15) {
-    return "Greater than or equal to 15";
-  } else if (val < 5) {
-    return "smaller than 5";
-  } else {
-    return "between 5 and 15";
-  }
+	if (val >= 15) {
+		return "Greater than or equal to 15";
+	} else if (val < 5) {
+		return "smaller than 5";
+	} else {
+		return "between 5 and 15";
+	}
 }
 
 console.log(testElseIf(15));
@@ -837,28 +837,28 @@ console.log(testElseIf(4));
 let flavour = "chocolate";
 
 switch (flavour) {
-  case "strawberry":
-    console.log("I love Strawberry");
-    break;
-  case "vanilla":
-    console.log("I love Vanilla");
-    break;
-  default:
-    console.log("I don't like that flavour");
+	case "strawberry":
+		console.log("I love Strawberry");
+		break;
+	case "vanilla":
+		console.log("I love Vanilla");
+		break;
+	default:
+		console.log("I don't like that flavour");
 }
 
 let r = "";
 
 function myWinningNumber(num) {
-  switch (num) {
-    case 1:
-    case 2:
-    case 3:
-      r = "1, or 2, or 3";
-      break;
-    case 4:
-      r = "4 is lonely";
-  }
+	switch (num) {
+		case 1:
+		case 2:
+		case 3:
+			r = "1, or 2, or 3";
+			break;
+		case 4:
+			r = "4 is lonely";
+	}
 }
 
 myWinningNumber(1);
@@ -891,26 +891,26 @@ showRange(9) //-> High;
 */
 
 function showRange(num) {
-  let result = "";
-  switch (num) {
-    case 1:
-    case 2:
-    case 3:
-      result = "Low";
-      break;
-    case 4:
-    case 5:
-    case 6:
-      result = "Mid";
-      break;
-    case 7:
-    case 8:
-    case 9:
-      result = "High";
-      break;
-  }
+	let result = "";
+	switch (num) {
+		case 1:
+		case 2:
+		case 3:
+			result = "Low";
+			break;
+		case 4:
+		case 5:
+		case 6:
+			result = "Mid";
+			break;
+		case 7:
+		case 8:
+		case 9:
+			result = "High";
+			break;
+	}
 
-  return result;
+	return result;
 }
 console.log(showRange(7));
 /* 
@@ -941,28 +941,28 @@ console.log(showRange(7));
 */
 
 function changeToSwitch(arg) {
-  let result = "";
-  switch (true) {
-    case arg === "dupe":
-      result = "She is beautiful";
-      break;
-    case arg <= 20:
-      result = "You're too young";
-      break;
-    case arg === "address":
-      result = "I don't live here";
-      break;
-    case arg > 20 && arg < 80:
-      result = "You're old enough ";
-      break;
-    case arg >= 80:
-      result = "Sir, You're a distinguished elder statesman";
-      break;
-    default:
-      result = "I don't understand your request";
-      break;
-  }
-  return result;
+	let result = "";
+	switch (true) {
+		case arg === "dupe":
+			result = "She is beautiful";
+			break;
+		case arg <= 20:
+			result = "You're too young";
+			break;
+		case arg === "address":
+			result = "I don't live here";
+			break;
+		case arg > 20 && arg < 80:
+			result = "You're old enough ";
+			break;
+		case arg >= 80:
+			result = "Sir, You're a distinguished elder statesman";
+			break;
+		default:
+			result = "I don't understand your request";
+			break;
+	}
+	return result;
 }
 
 console.log(changeToSwitch(21));
@@ -975,11 +975,11 @@ Creating Objects
 */
 
 const car = {
-  brand: "Toyota",
-  doors: 5,
-  engine: "v4",
-  color: "silver",
-  gear: ["auto", "manual"],
+	brand: "Toyota",
+	doors: 5,
+	engine: "v4",
+	color: "silver",
+	gear: ["auto", "manual"],
 };
 
 /* 
@@ -1005,9 +1005,9 @@ Create a an object that models a pet dog, which has the following properties
 */
 
 const FormulaOne = {
-  "formation lap": 2,
-  "black flag": 1,
-  chicane: 10,
+	"formation lap": 2,
+	"black flag": 1,
+	chicane: 10,
 };
 
 /* Example Of Accessing Object Properties Using Bracket Notation */
@@ -1031,9 +1031,9 @@ console.log(driverTwo);
 	Log the value to console.
 */
 const LagosFC = {
-  12: "Papi",
-  10: "Wilfred",
-  16: "Saka",
+	12: "Papi",
+	10: "Wilfred",
+	16: "Saka",
 };
 
 let playerNum = 22;
@@ -1049,9 +1049,9 @@ console.log(LagosFC[playerNum]);
 /*  Updating Object Properties */
 
 const employee = {
-  name: "Babajide",
-  role: "Software Developer",
-  department: "IT",
+	name: "Babajide",
+	role: "Software Developer",
+	department: "IT",
 };
 
 // Assuming the employee role has changed to Snr Software Developer
@@ -1073,11 +1073,11 @@ console.log(employee);
 
 /* Using Objects for Lookups */
 const blogArticle = {
-  title: "How to create Objects",
-  link: "https://example.com/how-to-create-objects.html",
-  author: "Babajide Ibiayo",
-  tags: ["technlogy", "javascript"],
-  createdAt: "Nov 23, 2023",
+	title: "How to create Objects",
+	link: "https://example.com/how-to-create-objects.html",
+	author: "Babajide Ibiayo",
+	tags: ["technlogy", "javascript"],
+	createdAt: "Nov 23, 2023",
 };
 
 const articleAuthor = blogArticle.author;
@@ -1125,24 +1125,24 @@ console.log(valLookup);
 } */
 
 function colorLookup(color) {
-  let hexCode = "";
+	let hexCode = "";
 
-  // Only change code below this line
-  const lookupColor = {
-    white: "#ffffff",
-    black: "#000000",
-    blue: "#0000FF",
-    red: "#FF0000",
-    green: "#008000",
-  };
+	// Only change code below this line
+	const lookupColor = {
+		white: "#ffffff",
+		black: "#000000",
+		blue: "#0000FF",
+		red: "#FF0000",
+		green: "#008000",
+	};
 
-  hexCode = lookupColor[color];
-  if (hexCode === undefined) {
-    hexCode = "Unavailable";
-  }
+	hexCode = lookupColor[color];
+	if (hexCode === undefined) {
+		hexCode = "Unavailable";
+	}
 
-  //Only change code above this line
-  return hexCode;
+	//Only change code above this line
+	return hexCode;
 }
 
 console.log(colorLookup("blue"));
@@ -1155,20 +1155,20 @@ console.log(colorLookup("Yellow"));
 	You can test for the existence of an object property using the objects hasOwnProperty() method. The method returns a Boolean true if found, or false if not found.		
 */
 function checkSizeCodes(code) {
-  const sizeCodes = {
-    s: "small",
-    m: "medium",
-    l: "large",
-    xl: "extra large",
-    xxl: "double extra large",
-    xxxl: "triple extra large",
-  };
-  if (sizeCodes.hasOwnProperty(code)) {
-    console.log(sizeCodes[code]);
-  } else {
-    console.log("Not found");
-  }
-  return sizeCodes.hasOwnProperty(code);
+	const sizeCodes = {
+		s: "small",
+		m: "medium",
+		l: "large",
+		xl: "extra large",
+		xxl: "double extra large",
+		xxxl: "triple extra large",
+	};
+	if (sizeCodes.hasOwnProperty(code)) {
+		console.log(sizeCodes[code]);
+	} else {
+		console.log("Not found");
+	}
+	return sizeCodes.hasOwnProperty(code);
 }
 
 checkSizeCodes("s");
@@ -1183,33 +1183,33 @@ checkSizeCodes("xs");
 */
 
 const musicAlbumCollection = [
-  {
-    artist: "Asake",
-    title: "Work Of Art",
-    release_year: 2023,
-    formats: ["CD", "mp4"],
-    "total plays": 540388818,
-    genre: "Afrobeats",
+	{
+		artist: "Asake",
+		title: "Work Of Art",
+		release_year: 2023,
+		formats: ["CD", "mp4"],
+		"total plays": 540388818,
+		genre: "Afrobeats",
 	},
-  {
-    artist: "Rema",
-    title: "Ravage",
-    release_year: 2023,
-    formats: ["CD", "mp4"],
-    "total plays": 2706613,
-    genre: "Afrobeats",
+	{
+		artist: "Rema",
+		title: "Ravage",
+		release_year: 2023,
+		formats: ["CD", "mp4"],
+		"total plays": 2706613,
+		genre: "Afrobeats",
 	},
 ];
 
 /* Exercise - add a new to the album to the music collection - artist - Olamide, title - Unruly, release_year - 2023, total plays - 133946549, genre - Afrobeats formats - CD, mp4*/
 
 musicAlbumCollection.push({
-  artist: "Olamide",
-  title: "Unruly",
-  release_year: 2023,
-  formats: ["CD", "mp4"],
-  "total plays": 133946549,
-  genre: "Afrobeats",
+	artist: "Olamide",
+	title: "Unruly",
+	release_year: 2023,
+	formats: ["CD", "mp4"],
+	"total plays": 133946549,
+	genre: "Afrobeats",
 });
 
 console.log(musicAlbumCollection);
@@ -1224,16 +1224,16 @@ console.log(musicAlbumCollection);
 */
 
 const officeStorage = {
-  desk: {
-    drawer: "Stationery",
-  },
-  cabinet: {
-    "top drawer": {
-      folder1: "file",
-      folder2: "secrets",
-    },
-    "bottom drawer": "Biscuits",
-  },
+	desk: {
+		drawer: "Stationery",
+	},
+	cabinet: {
+		"top drawer": {
+			folder1: "file",
+			folder2: "secrets",
+		},
+		"bottom drawer": "Biscuits",
+	},
 };
 
 const contentFolder2 = officeStorage.cabinet["top drawer"].folder2;
@@ -1243,13 +1243,13 @@ console.log(contentFolder2); //-> secrets
 // Exercise - Access the car storage object and assign the contents of the glove box to the gloveBoxContents variable
 
 const carStorage = {
-  inside: {
-    "glove box": "vehicle particulars",
-    "door compartment": "lollipop",
-  },
-  outside: {
-    trunk: "jack",
-  },
+	inside: {
+		"glove box": "vehicle particulars",
+		"door compartment": "lollipop",
+	},
+	outside: {
+		trunk: "jack",
+	},
 };
 
 const gloveBoxContents = carStorage.inside["glove box"];
@@ -1265,16 +1265,16 @@ console.log(gloveBoxContents); //-> vehicle particulars
 */
 
 const myPets = [
-  {
-    type: "cat",
-    names: ["Carrie", "Kolo", "Kitty"],
-    "fav food": null,
+	{
+		type: "cat",
+		names: ["Carrie", "Kolo", "Kitty"],
+		"fav food": null,
 	},
-  {
-    type: "dog",
-    names: ["Buster"],
-    "fav food": ["Beef", "watermelon"],
-    breed: "Doberman",
+	{
+		type: "dog",
+		names: ["Buster"],
+		"fav food": ["Beef", "watermelon"],
+		breed: "Doberman",
 	},
 ];
 
@@ -1284,13 +1284,13 @@ console.log(myPets[1]["fav food"][0]); //-> Beef
 // Exercise - Using the dot and bracket notation, set the variable secondPlant to the second item in the trees list from the myGarden Object
 
 const myGarden = [
-  {
-    plant: "flowers",
-    list: ["rose", "....."],
+	{
+		plant: "flowers",
+		list: ["rose", "....."],
 	},
-  {
-    plant: "trees",
-    list: ["pine", "....."],
+	{
+		plant: "trees",
+		list: ["pine", "....."],
 	},
 ];
 
@@ -1320,24 +1320,24 @@ const secondPlant = "";
 	A) Based on the Data above create and complete the CD Collection Object. It will be used for the tests
 	*/
 const cdCollection = {
-  234: {
-    cdTitle: "Unruly",
-    artist: "Olamide",
-    tracks: ["Gaza", "Jinja"],
-  },
-  254: {
-    cdTitle: "Savage",
-    artist: "Rhema",
-    tracks: ["DND", "Red potion"],
-  },
-  264: {
-    cdTitle: "Work Of Art",
-    artist: "Asake",
-    tracks: ["2:30"],
-  },
-  284: {
-    cdTitle: "I Told Them",
-  },
+	234: {
+		cdTitle: "Unruly",
+		artist: "Olamide",
+		tracks: ["Gaza", "Jinja"],
+	},
+	254: {
+		cdTitle: "Savage",
+		artist: "Rhema",
+		tracks: ["DND", "Red potion"],
+	},
+	264: {
+		cdTitle: "Work Of Art",
+		artist: "Asake",
+		tracks: ["2:30"],
+	},
+	284: {
+		cdTitle: "I Told Them",
+	},
 };
 /*
 	B) Create an updateCollection function which 
@@ -1366,31 +1366,31 @@ const cdCollection = {
 
 */
 function updateCollection(collection, id, prop, value) {
-  // Add your code here
-  if (value === "" && cdCollection[id].hasOwnProperty(prop)) {
-    delete cdCollection[id][prop];
-  }
+	// Add your code here
+	if (value === "" && cdCollection[id].hasOwnProperty(prop)) {
+		delete cdCollection[id][prop];
+	}
 
-  if (prop !== "tracks" && value !== "") {
-    cdCollection[id][prop] = value;
-  }
+	if (prop !== "tracks" && value !== "") {
+		cdCollection[id][prop] = value;
+	}
 
-  if (cdCollection[id].hasOwnProperty("tracks") === false && value !== "") {
-    cdCollection[id]["tracks"] = [];
-    cdCollection[id]["tracks"].push(value);
-  } else if (
-    cdCollection[id].hasOwnProperty("tracks") === true &&
-    prop !== "cdTitle" &&
-    value !== ""
-  ) {
-    cdCollection[id]["tracks"].push(value);
-  }
+	if (cdCollection[id].hasOwnProperty("tracks") === false && value !== "") {
+		cdCollection[id]["tracks"] = [];
+		cdCollection[id]["tracks"].push(value);
+	} else if (
+		cdCollection[id].hasOwnProperty("tracks") === true &&
+		prop !== "cdTitle" &&
+		value !== ""
+	) {
+		cdCollection[id]["tracks"].push(value);
+	}
 
-  if (cdCollection[id].hasOwnProperty("tracks") === false) {
-    cdCollection[id]["tracks"] = value;
-  }
+	if (cdCollection[id].hasOwnProperty("tracks") === false) {
+		cdCollection[id]["tracks"] = value;
+	}
 
-  return collection;
+	return collection;
 }
 
 /* 
@@ -1427,8 +1427,8 @@ s	}
 */
 let z = 0;
 while (z < 5) {
-  console.log(z);
-  z++;
+	console.log(z);
+	z++;
 }
 
 // Exercise - Add the numbers 5 through 0(inclusive) in descending order to an Array called range5 using a while loop. //-> [5, 4, 3, 2, 1, 0];
@@ -1437,8 +1437,8 @@ const range5 = [];
 let n = 5;
 
 while (n >= 0) {
-  range5.push(n);
-  n--;
+	range5.push(n);
+	n--;
 }
 
 console.log(range5);
@@ -1467,7 +1467,7 @@ console.log(range5);
 const rangeOf5 = [];
 
 for (let i = 0; i < 5; i++) {
-  rangeOf5.push(i);
+	rangeOf5.push(i);
 }
 console.log(rangeOf5);
 
@@ -1475,7 +1475,7 @@ console.log(rangeOf5);
 
 const myArray = [];
 for (let i = 1; i <= 5; i++) {
-  myArray.push(i);
+	myArray.push(i);
 }
 console.log(myArray);
 
@@ -1485,7 +1485,7 @@ const evenNumbers = [];
 
 // Add your code here
 for (let i = 0; i < 10; i += 2) {
-  evenNumbers.push(i);
+	evenNumbers.push(i);
 }
 
 console.log(evenNumbers); //-> [0, 2, 4, 8]
@@ -1496,7 +1496,7 @@ const oddNumbers = [];
 
 // Add your code here
 for (let i = 1; i < 10; i += 2) {
-  oddNumbers.push(i);
+	oddNumbers.push(i);
 }
 console.log(oddNumbers); //-> [1, 3, 5, 7, 9]
 
@@ -1506,7 +1506,7 @@ const reversedEvenNumbers = [];
 
 // Add your code here
 for (let i = 10; i > 0; i -= 2) {
-  reversedEvenNumbers.push(i);
+	reversedEvenNumbers.push(i);
 }
 console.log(reversedEvenNumbers); //-> [10, 8, 6, 4, 2]
 
@@ -1522,7 +1522,7 @@ console.log(reversedEvenNumbers); //-> [10, 8, 6, 4, 2]
 const arr = [8, 7, 6, 5, 4];
 
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
+	console.log(arr[i]);
 }
 
 // Exercise D - Use a For loop to find the sum of the numbers in the given array and store the sum in a variable called total.
@@ -1533,7 +1533,7 @@ let total = 0;
 
 // Add your code below this line
 for (let i = 0; i < myNumbers.length; i++) {
-  total += myNumbers[i];
+	total += myNumbers[i];
 }
 console.log(total); //-> 30
 
@@ -1553,10 +1553,10 @@ const md_arr = [
 const md_arr_flat = [];
 // Loops through the parent array
 for (let i = 0; i < md_arr.length; i++) {
-  //Loops through the sub-arrays
-  for (let j = 0; j < md_arr[j].length; j++) {
-    md_arr_flat.push(md_arr[i][j]);
-  }
+	//Loops through the sub-arrays
+	for (let j = 0; j < md_arr[j].length; j++) {
+		md_arr_flat.push(md_arr[i][j]);
+	}
 }
 
 console.log(md_arr_flat); //-> [1, 2, 3, 4, 5, 6]
@@ -1565,21 +1565,21 @@ console.log(md_arr_flat); //-> [1, 2, 3, 4, 5, 6]
  */
 
 function multiplyAllPrices(arrOfPrices) {
-  let product = 1;
+	let product = 1;
 
-  //Add your code below here
-  for (let i = 0; i < arrOfPrices.length; i++) {
-    for (let j = 0; j < arrOfPrices[i].length; j++) {
-      product *= arrOfPrices[i][j];
-    }
-  }
+	//Add your code below here
+	for (let i = 0; i < arrOfPrices.length; i++) {
+		for (let j = 0; j < arrOfPrices[i].length; j++) {
+			product *= arrOfPrices[i][j];
+		}
+	}
 
-  return product;
+	return product;
 }
 
 //Test
 console.log(
-  multiplyAllPrices([
+	multiplyAllPrices([
 		[1.99, 2.99],
 		[3.99, 4.99],
 		[1.99, 2.78],
@@ -1605,8 +1605,8 @@ const arrayOfFive = [];
 let p = 1;
 
 do {
-  arrayOfFive.push(p);
-  p++;
+	arrayOfFive.push(p);
+	p++;
 } while (p <= 5);
 
 console.log(arrayOfFive);
@@ -1637,73 +1637,73 @@ function lookupCustomerProfile(name, prop) {
 */
 
 function lookupCustomer(name, prop) {
-  const customers = [
-    {
-      firstName: "Robert",
-      lastName: "Smith",
-      email: "r.smith@live.com",
-      phone: "+12074567890",
-      likes: ["Roasted Beef", "potato fries", "Curry Soup"],
+	const customers = [
+		{
+			firstName: "Robert",
+			lastName: "Smith",
+			email: "r.smith@live.com",
+			phone: "+12074567890",
+			likes: ["Roasted Beef", "potato fries", "Curry Soup"],
 		},
-    {
-      firstName: "James",
-      lastName: "Green",
-      email: "j.green@live.com",
-      phone: "+12081569890",
-      likes: ["Fried Beef", "potato fries", "curry soup"],
+		{
+			firstName: "James",
+			lastName: "Green",
+			email: "j.green@live.com",
+			phone: "+12081569890",
+			likes: ["Fried Beef", "potato fries", "curry soup"],
 		},
-    {
-      firstName: "Mary",
-      lastName: "Brown",
-      email: "b.brown@gmail.com",
-      phone: "+12078577990",
-      likes: ["roasted beef", "pasta", "onion soup"],
+		{
+			firstName: "Mary",
+			lastName: "Brown",
+			email: "b.brown@gmail.com",
+			phone: "+12078577990",
+			likes: ["roasted beef", "pasta", "onion soup"],
 		},
-    {
-      firstName: "Alan",
-      lastName: "Stone",
-      email: "a.stone@live.com",
-      phone: "+12068967870",
-      likes: ["roasted beef", "potato fries", "curry soup"],
+		{
+			firstName: "Alan",
+			lastName: "Stone",
+			email: "a.stone@live.com",
+			phone: "+12068967870",
+			likes: ["roasted beef", "potato fries", "curry soup"],
 		},
-    {
-      firstName: "Linda",
-      lastName: "Thomas",
-      email: "lthomas23@gmail.com",
-      phone: "+12068864550",
-      likes: ["corn beef", "potato fries", "mushroom soup"],
+		{
+			firstName: "Linda",
+			lastName: "Thomas",
+			email: "lthomas23@gmail.com",
+			phone: "+12068864550",
+			likes: ["corn beef", "potato fries", "mushroom soup"],
 		},
-    {
-      firstName: "Mathew",
-      lastName: "Gala",
-      email: "gallawy23@yahoo.com",
-      phone: "+1604467789",
-      likes: ["fried chicken", "plantain fries", "mixed soup"],
+		{
+			firstName: "Mathew",
+			lastName: "Gala",
+			email: "gallawy23@yahoo.com",
+			phone: "+1604467789",
+			likes: ["fried chicken", "plantain fries", "mixed soup"],
 		},
-    {
-      firstName: "Samantha",
-      lastName: "Knox",
-      email: "s.knox@live.com",
-      phone: "+1604576439",
-      likes: ["Roasted Beef", "potato fries", "Curry Soup"],
+		{
+			firstName: "Samantha",
+			lastName: "Knox",
+			email: "s.knox@live.com",
+			phone: "+1604576439",
+			likes: ["Roasted Beef", "potato fries", "Curry Soup"],
 		},
 	];
-  // Add code below this line
+	// Add code below this line
 
-  for (let i = 0; i < customers.length; i++) {
-    if (customers[i]["firstName"] === name) {
-      return customers[i].hasOwnProperty(prop) ?
-        customers[i][prop] :
-        "No such metadata";
+	for (let i = 0; i < customers.length; i++) {
+		if (customers[i]["firstName"] === name) {
+			return customers[i].hasOwnProperty(prop)
+				? customers[i][prop]
+				: "No such metadata";
 
-      /* if (customers[i].hasOwnProperty(prop)) {
+			/* if (customers[i].hasOwnProperty(prop)) {
       	return customers[i][prop];
       } else {
       	return "No such metadata";
       } */
-    }
-  }
-  return "No such customer";
+		}
+	}
+	return "No such customer";
 }
 
 //Tests+
@@ -1729,7 +1729,7 @@ console.log(lookupCustomer()); //-> No such customer
 */
 
 function generateRandomNumber() {
-  return Math.random();
+	return Math.random();
 }
 
 console.log(generateRandomNumber());
@@ -1747,7 +1747,7 @@ console.log(generateRandomNumber());
 */
 
 function generateRandomRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 console.log(generateRandomRange(2, 5));
@@ -1769,7 +1769,7 @@ console.log(myInt);
 //Exercise - Write a function called convertToInteger that takes a string as input and returns an integer
 
 function convertToInteger(str) {
-  return parseInt(str);
+	return parseInt(str);
 }
 console.log(convertToInteger("75")); //-> 75
 console.log(typeof convertToInteger("75")); //-> number
@@ -1805,9 +1805,9 @@ z is the code to run when the condition returns false
 // Example
 
 function findGreaterNum(a, b) {
-  return a > b ? a + " is greater" : b + " is greater or equal";
+	return a > b ? a + " is greater" : b + " is greater or equal";
 
-  /* if (a > b) {
+	/* if (a > b) {
   	return a + " is greater";
   } else {
   	return b + " is greater or equal";
@@ -1819,12 +1819,12 @@ console.log(findGreaterNum(5, 4));
 // Using Multiple Conditional Ternary Operators
 
 function findGreaterOrEqualNum(a, b) {
-  return a === b ?
-    a + " and " + b + " are equal" :
-    a > b ?
-    a + " is greater" :
-    b + " is greater";
-  /* if (a === b) {
+	return a === b
+		? a + " and " + b + " are equal"
+		: a > b
+		? a + " is greater"
+		: b + " is greater";
+	/* if (a === b) {
   	return a + " and " + b + " are equal";
   } else if (a > b) {
   	return a + " is greater";
@@ -1853,13 +1853,13 @@ Given a task to multiply the first N elements of an array to return a product of
 */
 
 function multiplyNums(arr, num) {
-  if (num <= 0) {
-    return 1;
-  } else {
-    return multiplyNums(arr, num - 1) * arr[num - 1];
-  }
+	if (num <= 0) {
+		return 1;
+	} else {
+		return multiplyNums(arr, num - 1) * arr[num - 1];
+	}
 
-  /* let product = 1;
+	/* let product = 1;
   for (let i = 0; i < num; i++) {
   	product *= arr[i];
   }
@@ -1921,9 +1921,30 @@ We want to write a program that prints two numbers, the numbers of cows and chic
   
   011 Chickens
 */
-
-function printFarmInventory(cows, chickens) {
-  
+function padWithThreeZeros(str) {
+	while (str.length < 3) {
+		str = "0" + str;
+	}
+	return str;
 }
 
-printFarmInventory(8, 12);
+function addLabel(label, str) {
+	return `${str} ${label}`;
+}
+
+function printFarmInventory(cows, chickens, pigs) {
+	let cowString = String(cows);
+	let chickenString = String(chickens);
+	let pigString = String(pigs);
+
+	cowString = padWithThreeZeros(cowString);
+	console.log(addLabel("Cows", cowString));
+
+	chickenString = padWithThreeZeros(chickenString);
+	console.log(addLabel("Chickens", chickenString));
+
+	pigString = padWithThreeZeros(pigString);
+	console.log(addLabel("Pigs", pigString));
+}
+
+printFarmInventory(8, 12, 5);
