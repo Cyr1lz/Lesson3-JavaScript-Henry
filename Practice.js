@@ -1868,48 +1868,6 @@ function multiplyNums(arr, num) {
 
 console.log(multiplyNums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)); //-> 24
 
-/* 
-	The Document Object Model (DOM)
-	
-	What is the DOM?
-
-	The DOM is the data representation of the objects that comprise the structure and content of a document on the web. In this case we would be looking at how the DOM represents an HTML document in memory and how to use Web APIs to manipulate and create web content and applications.
-
-	The DOM is a programming interface for web documents e.g HTML documents. It models a web page so that programs can change the structure (HTML), style (CSS), and Content
-
-	The DOM models or represents the document nodes and objects.
-
-	The nodes are entries in the tree structure and they represent elements (identified as HTML, HEAD, META, BODY and so on) and others represented as text or "content" known as leaf nodes.
-
-	The different types of Nodes
-	1. Root Node
-	2. Child Node
-	3. Descendant Node
-	4. Parent Node
-	5. Sibling Node
-*/
-
-/* 
-	Importance of the DOM in Web Development 
-
-	The DOM is crucial in web development because it serves as an interface that allows dynamic and interactive manipulation of a web page using programming languages like JavaScript
-
-	1. Dynamic Content Update - The DOM allows developers to dynamically update, add or remove content on a web page in response to user interactions or events
-
-	2. Interactivity - Developers can create interactive features such as form validation, image sliders, or real-time updates making websites more engaging for users
-
-	3. Cross-Browser Compatibility - The DOM provides a standardized way to interact with HTML documents ensuring cross browser compatibility. So you can write code that works consistently across different browsers
-
-	4. Responsive User Interfaces - Web applications use the DOM create responsive user interfaces, that adapt to user actions without a page refresh 
-
-	5. The DOM is essential for AJAX ( Asynchronous JavaScript and XML) operations which allows web pages to fetch and send data asynchronously without reloading the entire page
-
-	6. Events Handling - Developers can use the DOM to manage events, such as clicks, keyboard presses, or form submissions, enabling them to respond to user actions and create dynamic behavior
-
-	7. Structured Representation - The DOM represents HTML documents as a structured tree of objects, makes it easy for developers to navigate and manipulate different elements and attributes programmatically.
-
-*/
-
 /*
 Exercise 
 
