@@ -102,9 +102,7 @@ This takes two parameters
 - The event to listen to
 
 - The function to call when the event happens
-
-*/
-/* 
+ 
 Example
 Add an event handler to the button's "click" event, and the handler should react or respond to the event by setting the page background to a random color
 */
@@ -126,3 +124,110 @@ btn.addEventListener("click", () => {
 });
 
 /* Note the callback function or event handler can be a named function. So the above code can be refactored like this */
+
+function changeBackground() {
+	const randomClr = `
+    rgb(${random(255)}, ${random(255)}, ${random(255)})
+  `;
+
+	document.body.style.backgroundColor = randomClr;
+}
+
+btn.addEventListener("focus", changeBackground);
+
+/* 
+  Listening for other events.
+
+  There are other events that can be fired by DOM elements, such as 
+  - focus - this is fired when element is focussed
+  - blur - this is fired when the element is unfocussed
+  - dbclick - this fired when the element is double clicked
+  - mouseover - this is fired the mouse pointer hovers over an element
+  - mouseout - this is fired when the mouse pointer moves off the element.
+  
+  There are also other events that are specific to certain elements. For instance the play event for the video and audio elements
+*/
+
+/* 
+
+Removing Event Listeners 
+
+If you have added an Event listener using addEventListener(), you can again remove it using the removeEventListener().
+
+The removeEventListener takes the same parameters as the addEventListener() method
+removeEventListener(event, eventHandler);
+
+For example You can remove the event listener for the button element like so
+*/
+
+btn.removeEventListener("focus", changeBackground);
+
+/* 
+  Caveat - the removeEventListener only works for named callback functions. Therefore it will not work for anonymous functions
+*/
+
+/* 
+  Removing Event Listeners with anonymous functions.
+
+  To remove an event listener with an anonymous callback function created by the addEventListener(), you have to pass a third parameter to the addEventListener()
+
+  - Third parameter is an AbortSignal of a controller object to the addEventListener()
+
+  - Once the Abort Signal has been passed you can the call the abort() method on the controller owning the AbortSignal
+
+  For example
+*/
+const controller = new AbortController();
+
+btn.addEventListener(
+	"click",
+	() => {
+		const randomClr = `
+    rgb(${random(255)}, ${random(255)}, ${random(255)})
+  `;
+
+		document.body.style.backgroundColor = randomClr;
+	},
+	{ signal: controller.signal }
+);
+
+controller.abort();
+
+/* 
+  Notes:
+  - If you are working on small application with few event listeners it's Ok not to manually remove event listeners
+
+  - However if your application is complex and manges a lot event listeners then it   is advisable to manually remove event listeners when not needed to improve performance of your application. In that using named callback functions is recommended to keep your code clean and easier to debug. 
+*/
+
+/* 
+  Adding multiple listeners for a single event
+
+  You can add multiple event listeners for a single event using the construct below for example
+
+  element.addEventListener(event, functionA);
+  element.addEventListener(event, functionB);
+  element.addEventListener(event, functionC);
+
+*/
+
+btn.addEventListener("click", changeButtonColor);
+
+function changeButtonColor() {
+	btn.style.backgroundColor = "#ff0";
+}
+
+/* 
+  Assignment Event Handling 
+
+  Create two input form text fields for 
+  1) Full Name 
+  2) Email
+
+  Add an event listener to both fields such that they add a green border to the input field when focused and when the field loses focus sets the border to grey. Use a border of 2px;
+
+  Tip: 
+  - Remember that in Javascript CSS properties are written in camelCase.
+  - Use the style property of the DOM element to set the CSS styles of the element in JavaScript.
+
+*/
