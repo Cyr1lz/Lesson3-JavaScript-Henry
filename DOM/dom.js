@@ -214,7 +214,7 @@ controller.abort();
 btn.addEventListener("click", changeButtonColor);
 
 function changeButtonColor() {
-	btn.style.backgroundColor = "#ff0";
+	btn.style.backgroundColor = "#b0b0b0";
 }
 
 /* 
@@ -231,3 +231,37 @@ function changeButtonColor() {
   - Use the style property of the DOM element to set the CSS styles of the element in JavaScript.
 
 */
+
+const fullName = document.querySelector("#full-name");
+const email = document.querySelector("#email");
+
+/*
+//Attempt 1
+fullName.addEventListener("focus", () => {
+	fullName.style.outline = "none";
+	fullName.style.border = "2px solid green";
+});
+fullName.addEventListener("blur", () => {
+	fullName.style.border = "2px solid grey";
+});
+
+email.addEventListener("focus", () => {
+	email.style.outline = "none";
+	email.style.border = "2px solid green";
+});
+email.addEventListener("blur", () => {
+	email.style.border = "2px solid grey";
+}); */
+
+function addListenersTo(elm) {
+	for (let i = 0; i < elm.length; i++) {
+		elm[i].addEventListener("focus", () => {
+			elm[i].style.outline = "none";
+			elm[i].style.border = "2px solid red";
+		});
+		elm[i].addEventListener("blur", () => {
+			elm[i].style.border = "2px solid grey";
+		});
+	}
+}
+addListenersTo([fullName, email]);
