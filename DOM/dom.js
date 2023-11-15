@@ -201,7 +201,7 @@ controller.abort();
 */
 
 /* 
-  Adding multiple listeners for a single event
+  Adding multiple event listeners for a single event
 
   You can add multiple event listeners for a single event using the construct below for example
 
@@ -235,9 +235,8 @@ function changeButtonColor() {
 const fullName = document.querySelector("#full-name");
 const email = document.querySelector("#email");
 
-/*
 //Attempt 1
-fullName.addEventListener("focus", () => {
+/* fullName.addEventListener("focus", () => {
 	fullName.style.outline = "none";
 	fullName.style.border = "2px solid green";
 });
@@ -251,13 +250,13 @@ email.addEventListener("focus", () => {
 });
 email.addEventListener("blur", () => {
 	email.style.border = "2px solid grey";
-}); */
-
+});
+ */
 function addListenersTo(elm) {
 	for (let i = 0; i < elm.length; i++) {
 		elm[i].addEventListener("focus", () => {
 			elm[i].style.outline = "none";
-			elm[i].style.border = "2px solid red";
+			elm[i].style.border = "2px solid green";
 		});
 		elm[i].addEventListener("blur", () => {
 			elm[i].style.border = "2px solid grey";
@@ -265,3 +264,82 @@ function addListenersTo(elm) {
 	}
 }
 addListenersTo([fullName, email]);
+
+/* 
+
+Adding the same event listener to multiple elements 
+
+There are two main strategies to achieve this;
+- 1. Query all elements from DOM and attach an event listener to them 
+
+- 2. Take advantage of event bubbling by attaching an event listener to a common parent element
+
+Both strategies have their advantages and disadvantages
+
+- The first strategy is more intuitive and straightforward, however it consumes more code and memory
+
+- The second strategy is more efficient and flexible, but it requires more logic and careful handling of edge cases.
+
+*/
+
+// Example of strategy 1
+
+const myLinks = document.querySelectorAll(".link");
+console.log(myLinks); //-> A Node list object
+
+// Loop through the Node List using the forEach() method which takes a callback function
+myLinks.forEach(function (link) {
+	link.addEventListener("click", function () {
+		console.log("You clicked a link");
+	});
+});
+
+// Example of Strategy 2
+
+/*
+  The second strategy is to use Event Delegation, which is a technique that takes advantage of Even Bubbling.
+
+  What is Event Bubbling
+  
+  Event Bubbling is the natural behavior of how events are propagated up the DOM hierarchy from the target element that triggered or fired the event to its parent elements and further to the root of the document.
+
+  - Knowing the above fact, we can take advantage of this behavior to add an event listener to a common parent element of the target element that fired the event, such as the root element or the body element of the document.
+
+  - Then inside of the event listener function on the common parent element we can use the event.target property to check which child element actually triggered the event and then perform your logic based on that information.
+*/
+
+/* For example if you have three buttons with different IDs, we can add a click event listener to the document and check which button was clicked.*/
+
+document.addEventListener("click", function (event) {
+	switch (event.target.id) {
+		case "btn1":
+			console.log("You clicked Button 1");
+			break;
+		case "btn2":
+			console.log("You clicked Button 2");
+			break;
+		case "btn3":
+			console.log("You clicked Button 3");
+			break;
+
+		default:
+			// Do nothing if none of the button is clicked
+			break;
+	}
+});
+
+/* 
+
+  Stopping Event Propagation (Bubbling) 
+
+  Event bubbling can be convenient when you want to handle events on multiple levels of the DOM hierarchy.
+
+  However in some cases you might want to stop the propagation of events bubbling further up the hierarchy.
+
+  This can be done using the event.stopPropagation() within the event handler
+*/
+
+document.getElementById("btn3").addEventListener("click", function (event) {
+	console.log("Child Button Clicked");
+	event.stopPropagation(); //-> this stops the bubbling of the event
+});
