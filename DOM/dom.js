@@ -343,3 +343,19 @@ document.getElementById("btn3").addEventListener("click", function (event) {
 	console.log("Child Button Clicked");
 	event.stopPropagation(); //-> this stops the bubbling of the event
 });
+
+/* 
+  Notes
+
+  - Event Propagation is particularly useful when dealing with dynamic or generated content where you don't know beforehand how many elements will fire events or need event handlers or when they will be created.
+
+  - Therefore you can add an event listener to a parent container you know will always be available and present in the DOM.
+
+  - However please note that it is crucial to avoid or minimize the use of global event listeners on the document or window objects. 
+
+  - It is more efficient to add event listeners to specific elements or containers whenever possible to improve performance and reduce unintended side effects.
+
+  - Warning!!! Remember to remove event listeners when they are no longer needed especially when dealing with long-lived or single page applications. Failure to do this may lead to memory leaks.
+
+
+*/
