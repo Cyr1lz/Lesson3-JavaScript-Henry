@@ -356,6 +356,50 @@ document.getElementById("btn3").addEventListener("click", function (event) {
   - It is more efficient to add event listeners to specific elements or containers whenever possible to improve performance and reduce unintended side effects.
 
   - Warning!!! Remember to remove event listeners when they are no longer needed especially when dealing with long-lived or single page applications. Failure to do this may lead to memory leaks.
+*/
 
+/*
+  Traversing the DOM 
+
+  - There are some powerful fundamental DOM methods that allow JavaScript to dynamically create, access, remove and control HTML elements.
 
 */
+
+// Creating Elements
+function createTable() {
+	// 1. create the <table> element and a <tbody> using the createElement()
+	const tbl = document.createElement("table");
+	const tblBody = document.createElement("tbody");
+
+	// 2. Creating the table cells
+	for (let row = 0; row < 2; row++) {
+		// Create table rows
+		const tblRow = document.createElement("tr");
+		// 3. Create and Append Elements to the DOM
+		for (let cell = 0; cell < 2; cell++) {
+			// Create a <td>
+			const tblCell = document.createElement("td");
+			// Create the text node (Content inside the cell)
+			const cellTxt = document.createTextNode(`cell ${row}, ${cell}`);
+
+			// - append the textNode(content) to the cell
+			tblCell.appendChild(cellTxt);
+
+			// - append the cell(<td>) to the row(<tr>)
+			tblRow.appendChild(tblCell);
+		}
+
+		// - append the row(<tr>) to the body(<tbody>)
+		tblBody.appendChild(tblRow);
+
+		// - finally append the table body(<tbody>) to the table element(<table>)
+		tbl.appendChild(tblBody);
+	}
+
+	// Step 4 attach table to the DOM
+	const tblSection = document.getElementById("tbl");
+	tblSection.appendChild(tbl);
+	tbl.setAttribute("border", "1");
+}
+
+createTable();
