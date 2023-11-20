@@ -400,6 +400,6 @@ function createTable() {
 	const tblSection = document.getElementById("tbl");
 	tblSection.appendChild(tbl);
 	tbl.setAttribute("border", "1");
+	console.log(tbl.firstElementChild.childNodes);
 }
-
 createTable();
