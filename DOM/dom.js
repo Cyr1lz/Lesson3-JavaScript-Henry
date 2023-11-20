@@ -362,7 +362,6 @@ document.getElementById("btn3").addEventListener("click", function (event) {
   Creating & Appending DOM Elements
 
   - There are some powerful fundamental DOM methods that allow JavaScript to dynamically create, access, remove and control HTML elements.
-
 */
 
 // Creating Elements
@@ -370,7 +369,6 @@ function createTable() {
 	// 1. create the <table> element and a <tbody> using the createElement()
 	const tbl = document.createElement("table");
 	const tblBody = document.createElement("tbody");
-
 	// 2. Creating the table cells
 	for (let row = 0; row < 2; row++) {
 		// Create table rows
@@ -381,29 +379,23 @@ function createTable() {
 			const tblCell = document.createElement("td");
 			// Create the text node (Content inside the cell)
 			const cellTxt = document.createTextNode(`cell ${row}, ${cell}`);
-
 			// - append the textNode(content) to the cell
 			tblCell.appendChild(cellTxt);
-
 			// - append the cell(<td>) to the row(<tr>)
 			tblRow.appendChild(tblCell);
-		}
-
+		} // End of inner loop
 		// - append the row(<tr>) to the body(<tbody>)
 		tblBody.appendChild(tblRow);
-
 		// - finally append the table body(<tbody>) to the table element(<table>)
 		tbl.appendChild(tblBody);
-	}
+	} // End of outer loop
 
 	// Step 4 attach table to the DOM
 	const tblSection = document.getElementById("tbl");
 	tblSection.appendChild(tbl);
-
+	//Set Attribute
 	tbl.setAttribute("id", "table-1");
-
 	// Refactor code to add Table Headings
-
 	// Create new table row element
 	const newTR = document.createElement("tr");
 	// Insert the new row before first row
@@ -414,13 +406,13 @@ function createTable() {
 		const tblHead = document.createElement("th");
 		// 2. Create the text node
 		const txtNode = document.createTextNode(`Heading ${th}`);
-		// 3. Append the text node to the first table row
-		tblBody.childNodes[0].appendChild(tblHead);
+		// 3. Append the text node to each table heading
 		tblHead.appendChild(txtNode);
+		// 4. Append the table heading to the table body(<tbody>)
+		tblBody.childNodes[0].appendChild(tblHead);
 	}
 }
 createTable();
-
 /* 
   Traversing and Navigating the DOM
 	
