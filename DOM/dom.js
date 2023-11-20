@@ -399,7 +399,8 @@ function createTable() {
 	// Step 4 attach table to the DOM
 	const tblSection = document.getElementById("tbl");
 	tblSection.appendChild(tbl);
-	tbl.setAttribute("border", "1");
+
+	tbl.setAttribute("id", "table-1");
 
 	// Traverse the DOM
 	console.log(tbl.firstElementChild.childNodes);
@@ -407,12 +408,12 @@ function createTable() {
 createTable();
 
 /* 
-
-	Traversing and Navigating the DOM
+  Traversing and Navigating the DOM
 	
 	There are special properties that can be used to move across the DOM, to select nodes. Some of these are
 	- parentNode - to select the parent element od a sub node
-	- childNodes - to select all the sub node of a parent element - returns a node list
+	- childNodes - to select all the sub nodes of a parent element - returns a node list
+	- children - to select all the sub nodes of a parent element - returns a node list
 	- firstElementChild - to select the first child node of an element
 	- lastElementChild - to select the last child node of an element
 	- nextElementSibling - to select adjacent sub nodes of a parent element
