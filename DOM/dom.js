@@ -359,7 +359,7 @@ document.getElementById("btn3").addEventListener("click", function (event) {
 */
 
 /*
-  Traversing the DOM 
+  Creating & Appending DOM Elements
 
   - There are some powerful fundamental DOM methods that allow JavaScript to dynamically create, access, remove and control HTML elements.
 
@@ -400,6 +400,21 @@ function createTable() {
 	const tblSection = document.getElementById("tbl");
 	tblSection.appendChild(tbl);
 	tbl.setAttribute("border", "1");
+
+	// Traverse the DOM
 	console.log(tbl.firstElementChild.childNodes);
 }
 createTable();
+
+/* 
+
+	Traversing and Navigating the DOM
+	
+	There are special properties that can be used to move across the DOM, to select nodes. Some of these are
+	- parentNode - to select the parent element od a sub node
+	- childNodes - to select all the sub node of a parent element - returns a node list
+	- firstElementChild - to select the first child node of an element
+	- lastElementChild - to select the last child node of an element
+	- nextElementSibling - to select adjacent sub nodes of a parent element
+	- previousElementSibling - to select adjacent sub nodes of a parent element
+	*/
