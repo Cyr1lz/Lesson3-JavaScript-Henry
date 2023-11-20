@@ -402,8 +402,22 @@ function createTable() {
 
 	tbl.setAttribute("id", "table-1");
 
-	// Traverse the DOM
-	console.log(tbl.firstElementChild.childNodes);
+	// Refactor code to add Table Headings
+
+	// Create new table row element
+	const newTR = document.createElement("tr");
+	// Insert the new row before first row
+	tblBody.insertBefore(newTR, tblBody.firstElementChild);
+	// Setup a loop to create and append the table heading(<th>)
+	for (let th = 0; th < 2; th++) {
+		// 1. Create table heading element
+		const tblHead = document.createElement("th");
+		// 2. Create the text node
+		const txtNode = document.createTextNode(`Heading ${th}`);
+		// 3. Append the text node to the first table row
+		tblBody.childNodes[0].appendChild(tblHead);
+		tblHead.appendChild(txtNode);
+	}
 }
 createTable();
 
