@@ -417,11 +417,16 @@ createTable();
   Traversing and Navigating the DOM
 	
 	There are special properties that can be used to move across the DOM, to select nodes. Some of these are
-	- parentNode - to select the parent element od a sub node
-	- childNodes - to select all the sub nodes of a parent element - returns a node list
-	- children - to select all the sub nodes of a parent element - returns a node list
+	- parentNode - to select the parent element of a subnode
+	- childNodes - to select all the subnodes of a parent element - returns a node list
+	- children - to select all the subnodes of a parent element - returns a node list
 	- firstElementChild - to select the first child node of an element
 	- lastElementChild - to select the last child node of an element
-	- nextElementSibling - to select adjacent sub nodes of a parent element
-	- previousElementSibling - to select adjacent sub nodes of a parent element
+	- nextElementSibling - to select adjacent subnodes of a parent element
+	- previousElementSibling - to select adjacent subnodes of a parent element
+
+	Definitions:
+	- A parent node is a given node that has nested subnode(s)
+	- A subnode of a given node is called a child node.
+	- Sibling nodes are nodes that have a common parent node and have the same hierarchical level under the parent node 
 	*/
