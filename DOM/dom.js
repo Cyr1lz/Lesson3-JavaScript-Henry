@@ -422,11 +422,128 @@ createTable();
 	- children - to select all the subnodes of a parent element - returns a node list
 	- firstElementChild - to select the first child node of an element
 	- lastElementChild - to select the last child node of an element
-	- nextElementSibling - to select adjacent subnodes of a parent element
-	- previousElementSibling - to select adjacent subnodes of a parent element
+	- nextElementSibling - to select adjacent subnode of a parent element
+	- previousElementSibling - to select adjacent subnode of a parent element
 
 	Definitions:
 	- A parent node is a given node that has nested subnode(s)
 	- A subnode of a given node is called a child node.
 	- Sibling nodes are nodes that have a common parent node and have the same hierarchical level under the parent node 
 	*/
+
+/* 
+1. Parent Node 
+To select a parent node we use two properties of the DOM element. These properties are parentNode and parentElement
+*/
+const ul = document.querySelector(".items");
+console.log((ul.parentNode.style.color = "orange"));
+
+/* 
+	2. Child Node
+	To select or access the child node we use the children property. 
+*/
+
+// To access item 2 in the list we can use children[1] and set color to red
+ul.children[1].style.color = "red";
+
+/* There are other properties for accessing subnodes 
+	- firstElementChild 
+	- lastElementChild
+*/
+
+ul.firstElementChild.style.color = "green";
+ul.lastElementChild.style.color = "blue";
+
+/* 
+	3. Sibling Node 
+	With siblings we have two properties
+	- nextElementSibling
+	- previousElementSibling
+*/
+
+console.log(ul.children[1].previousElementSibling); //-> Item 1
+console.log(ul.children[1].nextElementSibling); //-> Item 3
+
+/* 
+	Manipulating the DOM
+	
+	We can manipulate dynamically DOM elements using several DOM methods and properties
+*/
+
+/* 
+	1. Create an Element 
+	To create an element we use the createElement(tagName) method
+*/
+
+const li = document.createElement("li");
+console.log(li); //-> <li></li>
+
+// Note the method does not insert the element created inside the DOM. it only creates it in memory.
+
+/* 
+	2. Adding Text Content to the DOM 
+	To add text content to the DOM we use the .textContent or innerText property
+*/
+
+ul.firstElementChild.textContent = "First Item";
+
+ul.children[2].innerText = "Third Item";
+
+/* 3. Adding HTML content 
+To add HTML content we use the .innerHTML property. 
+
+Note: Using innerHTML to add content is NOT to the dom is not recommended because it can create security issues, if misused. Instead use the .textContent property.
+*/
+
+ul.lastElementChild.innerHTML = "<li>Item 3 - Unauthorized</li>";
+
+/* 
+	4 Appending an Element to the DOM 
+	When we create an element and insert its text node, the element is not part of the DOM tree yet.
+
+	- So to append to the HTML page we use the appendChild() method
+	parentNode.appendChild(childNode)
+*/
+
+// set the text content
+li.textContent = "Item 5";
+// append to the ul element
+ul.appendChild(li);
+
+/* 
+	5. Insert an Element before another 
+	To insert an element before another element in the HTML page or DOM we use the insertBefore(newNode, existingNode) method
+*/
+const newLi = document.createElement("li");
+newLi.textContent = "Item 4";
+
+ul.insertBefore(newLi, ul.lastElementChild);
+
+/* 
+	6. Replacing a child Element
+	To replace a child element we use the replaceChild(newNode, existingNode) method
+*/
+
+const anotherLi = document.createElement("li");
+anotherLi.textContent = "Item 5 - Replaced";
+ul.replaceChild(anotherLi, ul.lastElementChild);
+
+/* 
+	7. Removing a child Element 
+	To remove a child element we use the removeChild() method
+*/
+
+ul.children[3].remove(); //-> Item 4 is gone!!
+
+/* 
+	Adding inline styles to DOM elements
+	We can add inline styles to DOM elements with the style property. This also allows us to add multiple inline styles
+*/
+
+const divStyle = document.querySelector(".list").style;
+
+divStyle.border = "1px solid #ddd";
+divStyle.borderRadius = "10px";
+divStyle.padding = "8px";
+
+/* Dynamically Working with Classes */
