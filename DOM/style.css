@@ -30,3 +30,22 @@ tr:nth-child(even) td {
 tr:nth-child(odd) td {
 	background-color: rgb(245, 245, 245);
 }
+
+/* Nav Styles */
+.nav {
+	background-color: burlywood;
+	padding: 20px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.nav a {
+	text-decoration: none;
+	color: brown;
+	padding: 5px;
+	border-bottom: none;
+}
+
+.active {
+	border-bottom: 2px solid brown;
+}
