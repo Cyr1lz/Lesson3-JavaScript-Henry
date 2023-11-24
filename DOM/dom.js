@@ -546,4 +546,47 @@ divStyle.border = "1px solid #ddd";
 divStyle.borderRadius = "10px";
 divStyle.padding = "8px";
 
-/* Dynamically Working with Classes */
+/* 
+	Dynamically Working with CSS Classes
+	
+	The DOM provides methods for working with CSS classes via JavaScript
+
+	-className - sets the class name
+	-classList.add('className') - adds one or more class names
+	-classList.toggle('className') - toggles a class on or off
+	-classList.contains('className') - checks if the class name exists
+	-classList.replace('old', 'new') - replaces an existing class name with a new one
+	-classList.remove('className) - removes a class name
+*/
+
+// Setting a Class Name
+const nav = document.querySelector(".nav");
+nav.className = "highlight";
+
+// Adding a class Name
+nav.classList.add("nav");
+nav.classList.add("test");
+
+// Toggle a class Name
+nav.addEventListener("mouseover", (event) => {
+	let id = event.target.id;
+	const a = document.querySelector("#" + id);
+	a.classList.toggle("active");
+});
+nav.addEventListener("mouseout", (event) => {
+	let id = event.target.id;
+	const a = document.querySelector("#" + id);
+	a.classList.toggle("active");
+});
+
+// Check if a class name exists
+const classExists = nav.classList.contains("highlight");
+if (classExists) {
+	console.log("Highlight added");
+}
+
+// Replace a class name
+nav.classList.replace("highlight", "enhance");
+
+// Removing class name
+nav.classList.remove("test");

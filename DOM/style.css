@@ -33,7 +33,6 @@ tr:nth-child(odd) td {
 
 /* Nav Styles */
 .nav {
-	background-color: burlywood;
 	padding: 20px;
 	display: flex;
 	justify-content: space-evenly;
@@ -42,10 +41,19 @@ tr:nth-child(odd) td {
 .nav a {
 	text-decoration: none;
 	color: brown;
-	padding: 5px;
-	border-bottom: none;
+	padding: 2px;
 }
 
 .active {
 	border-bottom: 2px solid brown;
+}
+
+.highlight {
+	background-color: burlywood;
+}
+
+.enhance {
+	background-color: burlywood;
+	border: 1px solid brown;
+	border-radius: 8px;
 }
