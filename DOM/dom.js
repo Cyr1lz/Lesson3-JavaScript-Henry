@@ -590,3 +590,49 @@ nav.classList.replace("highlight", "enhance");
 
 // Removing class name
 nav.classList.remove("test");
+
+/* 
+	JSON - Javascript Object Notation 
+
+	- JSON is a string data representation format.
+
+	- It used to communicate between servers and clients
+
+	- It used for configuration files mostly on the server side
+
+	- Javascript provides two methods for working with JSON. These methods are
+
+	1. JSON.stringify(object, replacerFn, str); - this converts JavaScript Objects to JSON 
+  2.JSON.parse(string) - this converts a JSON string to Javascript Object
+
+	JSON Datatypes
+	String, Number, JSON Object, Array, Boolean and Null
+
+*/
+
+const obj = {
+	name: "John",
+	age: 30,
+	hobbies: ["chess", "soccer"],
+};
+
+// Convert an Obj to JSON String
+const JSONStr = JSON.stringify(obj);
+console.log(JSONStr);
+console.log(typeof JSONStr);
+
+// Convert JSON String to a valid JS Object
+const JSONObj = JSON.parse(JSONStr);
+console.log(JSONObj);
+console.log(typeof JSONObj);
+
+// Using a replacer function with JSON.Stringify
+function replacer(key, value) {
+	if (typeof value === "number") {
+		return undefined;
+	}
+	return value;
+}
+
+const newJSONStr = JSON.stringify(obj, replacer);
+console.log(newJSONStr);
